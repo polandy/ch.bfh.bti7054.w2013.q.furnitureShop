@@ -1,0 +1,14 @@
+24.10.2013
+----------
+- Zielgruppe definiert
+- Dokumentenvorlage
+
+01.10.2013
+----------
+- Task 1.2
+
+08.10.2013
+----------
+- Git Repository fertig eingerichtet
+- Personas definiert
+- Übungen CSS
