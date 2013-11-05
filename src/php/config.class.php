@@ -2,6 +2,7 @@
 
 class config
 {
+    
     var $rootDir;
     var $webRootDir;
     var $webCssDir;
@@ -67,4 +68,6 @@ class config
     function connectDatabase()
     {
     }
+
+
 }

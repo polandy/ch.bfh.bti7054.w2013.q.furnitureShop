@@ -12,3 +12,14 @@
 - Git Repository fertig eingerichtet
 - Personas definiert
 - Übungen CSS
+
+29.10.2013
+----------
+- Framework Diskussion -> Foundation als CSS Framework
+- DB Schema
+
+05.11.2013
+----------
+- Template erstellen
+- DB Schema Fortsetzung
+
