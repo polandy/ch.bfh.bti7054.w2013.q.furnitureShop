@@ -2,3 +2,12 @@
 .contain-to-grid {
   background: #fafafa;
 }
+
+/* line 7, ../sass/foundation-override.scss */
+.top-bar {
+  background: #fafafa;
+}
+/* line 9, ../sass/foundation-override.scss */
+.top-bar .top-bar-section {
+  background: #fafafa;
+}

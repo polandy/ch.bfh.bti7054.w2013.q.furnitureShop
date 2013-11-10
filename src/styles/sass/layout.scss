@@ -17,3 +17,25 @@ nav {
     }
   }
 }
+
+
+
+.content {
+  .row {
+    margin: 0 auto;
+    .column, .columns {
+      padding: 0;
+    }
+  }
+}
+
+footer {
+  background: $background-color !important;
+  .top-bar {
+    border-top: 1px solid;
+    .top-bar-section ul {
+      background: $background-color !important;
+      color: black;
+    }
+  }
+}

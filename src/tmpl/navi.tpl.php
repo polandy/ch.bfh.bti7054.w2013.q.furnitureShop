@@ -1,4 +1,3 @@
-<div class="wrapper">
     <div class="contain-to-grid">
         <nav class="top-bar">
             <ul class="title-area">

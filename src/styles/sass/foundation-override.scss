@@ -2,3 +2,20 @@
 .contain-to-grid {
   background: $background-color;
 }
+
+
+.top-bar {
+  background: $background-color;
+  .top-bar-section {
+    background: $background-color;
+    ul {
+
+    }
+  }
+}
+
+.top-bar {
+  .top-bar-section ul {
+    //background: green;
+  }
+}

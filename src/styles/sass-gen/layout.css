@@ -20,3 +20,26 @@ nav section {
 nav section .active {
   min-width: 6em;
 }
+
+/* line 24, ../sass/layout.scss */
+.content .row {
+  margin: 0 auto;
+}
+/* line 26, ../sass/layout.scss */
+.content .row .column, .content .row .columns {
+  padding: 0;
+}
+
+/* line 32, ../sass/layout.scss */
+footer {
+  background: #fafafa !important;
+}
+/* line 34, ../sass/layout.scss */
+footer .top-bar {
+  border-top: 1px solid;
+}
+/* line 36, ../sass/layout.scss */
+footer .top-bar .top-bar-section ul {
+  background: #fafafa !important;
+  color: black;
+}

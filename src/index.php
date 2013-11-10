@@ -15,7 +15,7 @@ $tpl = new TemplateEngine();
     <div class="wrapper">
         <?php $tpl->display("navi"); ?>
         <div class="content">
-            <div style="row">
+            <div class="row">
                 <?php
                 $pageId = isset($_GET["pageId"]) ? $_GET["pageId"] : null;
                 if (isset($pageId)) {
