@@ -57,7 +57,8 @@ class config
         $this->title = "Furniture Shop - ";
 
         # Page Id's
-        $this->pageIds = array(1 => "home");
+        $this->pageIds = array( 1 => "home",
+                                2 => "category");
 
         # Datenbank verbinden
         $this->connectDatabase();

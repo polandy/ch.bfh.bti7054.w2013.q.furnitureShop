@@ -3,11 +3,6 @@ body {
   background: #fafafa;
 }
 
-/* line 7, ../sass/layout.scss */
-.wrapper {
-  margin-top: 5em;
-}
-
 /* line 11, ../sass/layout.scss */
 nav {
   margin-top: 4em;
@@ -34,11 +29,7 @@ nav section .active {
 footer {
   background: #fafafa !important;
 }
-/* line 34, ../sass/layout.scss */
-footer .top-bar {
-  border-top: 1px solid;
-}
-/* line 36, ../sass/layout.scss */
+/* line 35, ../sass/layout.scss */
 footer .top-bar .top-bar-section ul {
   background: #fafafa !important;
   color: black;
