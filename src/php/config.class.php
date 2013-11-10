@@ -41,13 +41,13 @@ class config
         $this->phpDir = realpath("./php") . "/";
 
         # The name of the database
-        $this->database = "DBNAME";
+        $this->database = "db_furnitureShop";
 
         # The database user
-        $this->database_user = "user";
+        $this->database_user = "db_furnitureShop";
 
         # The database password
-        $this->database_pw = "password";
+        $this->database_pw = "db_furnitureShop";
 
         # Charset der Webseite
         $this->charset = "UTF-8";
