@@ -1,29 +1,27 @@
 <?php
-
 class config
 {
 
-    var $rootDir;
-    var $webRootDir;
-    var $webCssDir;
-    var $webImgDir;
-    var $webPhpDir;
-    var $phpDir;
-    var $viewDir;
-    var $tplDir;
-    var $funcDir;
-    var $polDir;
+    public $rootDir;
+    public $webRootDir;
+    public $webCssDir;
+    public $webImgDir;
+    public $webPhpDir;
+    public $phpDir;
+    public $viewDir;
 
-    var $database;
-    var $database_user;
-    var $database_pw;
-    var $database_host;
-    var $oracLink;
-
-    var $lang;
-    var $charset;
-    var $title;
-    var $analytics;
+    public $tplDir;
+    public $funcDir;
+    public $polDir;
+    public $database;
+    public $database_user;
+    public $database_pw;
+    public $database_host;
+    public $oracLink;
+    public $lang;
+    public $charset;
+    public $title;
+    public $analytics;
 
     function config()
     {
@@ -42,7 +40,6 @@ class config
         # The php directory
         $this->phpDir = realpath("./php") . "/";
 
-        # The view directory
         $this->viewDir = realpath("./php/view") . "/";
 
         # The name of the database
@@ -62,8 +59,7 @@ class config
 
         # Page Id's
         $this->pageIds = array(1 => "home",
-            2 => "category",
-            100 => "admin/category");
+            2 => "category");
 
         # Datenbank verbinden
         $this->connectDatabase();

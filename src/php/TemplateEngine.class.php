@@ -1,5 +1,4 @@
 <?php
-require_once("config.class.php");
 
 class TemplateEngine
 {

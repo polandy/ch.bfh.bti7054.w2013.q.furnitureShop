@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-require_once("php/config.class.php");
-require_once("php/template_engine.class.php");
-require_once('php/service/CategoryService.php');
+require_once 'php/Autoloader.class.php';
+new Autoloader();
 
 
 $config = new config();

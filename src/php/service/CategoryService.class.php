@@ -1,6 +1,8 @@
 <?php
 
-class CategoryService {
+namespace service;
+
+class CategoryService extends AbstractService {
 
     /**
      * @return array with all categories
@@ -12,4 +14,6 @@ class CategoryService {
             $category[] = $line;
         return $category;
     }
+
+
 }

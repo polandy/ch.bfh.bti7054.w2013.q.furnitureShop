@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717754eb-bef6-43ae-b738-ee9634589d87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/view/admin/category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tmpl/admin/category.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/view/home.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/model/Category.class.php" afterPath="$PROJECT_DIR$/src/php/model/Category.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/service/AbstractService.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/service/DBService.class.php" />
+      <change type="MOVED" beforePath="C:\dev\xampp\htdocs\furnitureShop\src\php\service\CategoryService.php" afterPath="$PROJECT_DIR$/src/php/service/CategoryService.class.php" />
+      <change type="MOVED" beforePath="C:\dev\xampp\htdocs\furnitureShop\src\php\template_engine.class.php" afterPath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/config.class.php" afterPath="$PROJECT_DIR$/src/php/config.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/database_testData.sql" afterPath="$PROJECT_DIR$/doc/database_testData.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.php" afterPath="$PROJECT_DIR$/src/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/template_engine.class.php" afterPath="$PROJECT_DIR$/src/php/template_engine.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tmpl/navi.tpl.php" afterPath="$PROJECT_DIR$/src/tmpl/navi.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="furnitureShop.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384885509991" ignored="false" />
+    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887964008" ignored="false" />
     <file path="$PROJECT_DIR$/../Verkehrssimulation/trunk/doc/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
     <file path="/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
-    <file path="/config.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886053532" ignored="false" />
-    <file path="/index.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886030888" ignored="false" />
+    <file path="/config.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888044381" ignored="false" />
+    <file path="/index.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887544609" ignored="false" />
     <file path="/header.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383075034099" ignored="false" />
-    <file path="/template_engine.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887851110" ignored="false" />
+    <file path="/template_engine.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887130020" ignored="false" />
     <file path="/error.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383074416879" ignored="false" />
     <file path="/error.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383074451738" ignored="false" />
     <file path="/footer.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383074518600" ignored="false" />
@@ -46,7 +45,7 @@
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/FurnitureFeature.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094601080" ignored="false" />
     <file path="/FurnitureFeature.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094088810" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/ShoppingCart.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094280570" ignored="false" />
-    <file path="/a.dummy" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886079928" ignored="false" />
+    <file path="/a.dummy" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887691790" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/Order.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094648473" ignored="false" />
     <file path="/Order.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094583908" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/dao/RoleDAOImpl.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094505262" ignored="false" />
@@ -88,8 +87,8 @@
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/services/CreditCardPaymentServiceImpl.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384095580842" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/services/RoleService.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384095580842" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/services/OfferServiceImpl.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384095583065" ignored="false" />
-    <file path="/navi.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384285114817" ignored="false" />
-    <file path="/CategoryService.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384884835017" ignored="false" />
+    <file path="/navi.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887814997" ignored="false" />
+    <file path="/CategoryService.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886633648" ignored="false" />
     <file path="/category.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384283804605" ignored="false" />
     <file path="/Category.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384285718267" ignored="false" />
     <file path="/GenericModel.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384285493013" ignored="false" />
@@ -99,9 +98,10 @@
     <file path="/Role.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384286029206" ignored="false" />
     <file path="/User.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384286432676" ignored="false" />
     <file path="/Order.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384286504024" ignored="false" />
-    <file path="/database_testData.sql" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384884576994" ignored="false" />
-    <file path="/database_structure.sql" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384882448135" ignored="false" />
-    <file path="/category.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886300278" ignored="false" />
+    <file path="/DBService.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886354494" ignored="false" />
+    <file path="/database_testData.sql" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384885657197" ignored="false" />
+    <file path="/AbstractService" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886095412" ignored="false" />
+    <file path="/AbstractService.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886603978" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,10 +162,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="category.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tmpl/admin/category.tpl.php">
+      <file leaf-file-name="navi.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tmpl/navi.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="28" selection-start="225" selection-end="283" vertical-scroll-proportion="-1.875">
+            <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Autoloader.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/php/Autoloader.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-12.423077">
               <folding />
             </state>
           </provider>
@@ -174,16 +183,34 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="17" selection-start="177" selection-end="177" vertical-scroll-proportion="-2.4489796">
+            <state line="7" column="17" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.8076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template_engine.class.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/php/template_engine.class.php">
+      <file leaf-file-name="config.class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/php/config.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.58614564">
+            <state line="41" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.46216768">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="standard_6.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.IntelliJIdea12/config/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_6.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1029" column="9" selection-start="33782" selection-end="33782" vertical-scroll-proportion="-11.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryService.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -208,29 +235,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/php/model/GenericModel.php" />
-        <option value="$PROJECT_DIR$/src/php/model/generic/GenericNamedModel.php" />
-        <option value="$PROJECT_DIR$/src/php/model/Feature.class.php" />
-        <option value="$PROJECT_DIR$/src/php/model/Furniure.class.php" />
         <option value="$PROJECT_DIR$/src/php/model/generic/Role.class.php" />
         <option value="$PROJECT_DIR$/src/php/model/User.class.php" />
         <option value="$PROJECT_DIR$/src/php/model/Order.class.php" />
-        <option value="$PROJECT_DIR$/src/tmpl/navi.tpl.php" />
-        <option value="$PROJECT_DIR$/doc/database_structure.sql" />
-        <option value="$PROJECT_DIR$/src/php/service/CategoryService.php" />
         <option value="$PROJECT_DIR$/doc/database_testData.sql" />
-        <option value="$PROJECT_DIR$/src/php/model/Category.class.php" />
-        <option value="$PROJECT_DIR$/src/php/config.class.php" />
-        <option value="$PROJECT_DIR$/src/index.php" />
-        <option value="$PROJECT_DIR$/src/tmpl/admin/category.tpl.php" />
+        <option value="$PROJECT_DIR$/src/php/service/AbstractService" />
+        <option value="$PROJECT_DIR$/src/php/service/DBService.php" />
+        <option value="$PROJECT_DIR$/src/php/service/AbstractService.php" />
+        <option value="$PROJECT_DIR$/src/php/service/CategoryService.php" />
         <option value="$PROJECT_DIR$/src/php/template_engine.class.php" />
+        <option value="$PROJECT_DIR$/src/index.php" />
+        <option value="$PROJECT_DIR$/src/php/service/AbstractService.class.php" />
+        <option value="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
+        <option value="$PROJECT_DIR$/src/php/service/CategoryService.class.php" />
+        <option value="$PROJECT_DIR$/src/php/Autoloader.class.php" />
+        <option value="$PROJECT_DIR$/src/tmpl/navi.tpl.php" />
+        <option value="$PROJECT_DIR$/src/php/config.class.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1922" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -261,8 +289,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,46 +337,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tmpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmpl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="php" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -371,47 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="furnitureShop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,7 +373,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Verkehrssimulation/trunk" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -434,18 +382,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/php/view/admin" />
+      <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\service" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model\generic" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\tmpl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/php/view" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model\generic" />
     </key>
@@ -467,6 +414,22 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -495,19 +458,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -583,9 +533,9 @@
       <created>1384286553121</created>
       <updated>1384286553121</updated>
     </task>
-    <task id="LOCAL-00007" summary="modified sql scripts">
-      <created>1384885514331</created>
-      <updated>1384885514331</updated>
+    <task id="LOCAL-00007" summary="read categories from textFile">
+      <created>1384286609350</created>
+      <updated>1384286609350</updated>
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
@@ -611,13 +561,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41602635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41450217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32821077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -627,21 +577,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946696" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.58549786" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -687,7 +637,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified sql scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="read categories from textFile" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -705,121 +655,118 @@
     <MESSAGE value="removed removeMe files" />
     <MESSAGE value="redesign" />
     <MESSAGE value="model, php classes" />
-    <MESSAGE value="modified sql scripts" />
+    <MESSAGE value="read categories from textFile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.rb">
+    <entry file="file://$PROJECT_DIR$/doc/database_structure.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.5882353" />
+        <state line="157" column="2" selection-start="4300" selection-end="4300" vertical-scroll-proportion="-17.8" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.php">
+    <entry file="file://$PROJECT_DIR$/doc/database_testData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="46" selection-start="183" selection-end="183" vertical-scroll-proportion="0.24691358">
+        <state line="4" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="-1.36">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Order.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.030864198">
+        <state line="9" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/database_testData.sql">
+    <entry file="file://$PROJECT_DIR$/src/php/model/Feature.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="0.14184397">
+        <state line="4" column="23" selection-start="48" selection-end="73" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/model/Furniure.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="22" selection-start="209" selection-end="209" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/database_structure.sql">
+    <entry file="file://$PROJECT_DIR$/src/php/service/DBService.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="17" selection-start="3988" selection-end="3988" vertical-scroll-proportion="0.2783505">
+        <state line="29" column="18" selection-start="589" selection-end="589" vertical-scroll-proportion="-18.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/model/User.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Category.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.24844721">
+        <state line="4" column="23" selection-start="48" selection-end="48" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/view/admin/category.php">
+    <entry file="file://$PROJECT_DIR$/src/php/service/AbstractService.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/view/home.php">
+    <entry file="file://$PROJECT_DIR$/src/php/TemplateEngine.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tmpl/home.tpl.php">
+    <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="2727" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tmpl/header.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tmpl/navi.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="575" selection-end="575" vertical-scroll-proportion="0.45293072">
+        <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tmpl/error.tpl.php">
+    <entry file="file://$PROJECT_DIR$/src/php/Autoloader.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tmpl/admin/category.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="225" selection-end="283" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/config.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="402" selection-end="402" vertical-scroll-proportion="0.7193606">
+        <state line="19" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-12.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="177" selection-end="177" vertical-scroll-proportion="-2.4489796">
+        <state line="7" column="17" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.8076923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/template_engine.class.php">
+    <entry file="jar://$USER_HOME$/.IntelliJIdea12/config/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_6.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.58614564">
+        <state line="1029" column="9" selection-start="33782" selection-end="33782" vertical-scroll-proportion="-11.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/config.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.46216768">
           <folding />
         </state>
       </provider>
