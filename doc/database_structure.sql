@@ -29,7 +29,7 @@ USE `db_furnitureshop`;
 --
 
 CREATE TABLE IF NOT EXISTS `category` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_de` varchar(40) NOT NULL,
   `name_en` varchar(40) NOT NULL,
   `isOpen` tinyint(1) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 --
 
 CREATE TABLE IF NOT EXISTS `feature` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_de` varchar(40) NOT NULL,
   `name_en` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `feature` (
 --
 
 CREATE TABLE IF NOT EXISTS `furniture` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `basicPrice` int(11) NOT NULL,
   `description_de` longtext,
   `description_en` longtext,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `furniture` (
 --
 
 CREATE TABLE IF NOT EXISTS `furniturefeature` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `extraPrice` int(11) NOT NULL,
   `value_de` varchar(256) NOT NULL,
   `value_en` varchar(256) NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `furniturefeature` (
 --
 
 CREATE TABLE IF NOT EXISTS `order_furniture` (
-  `orderId` int(11) NOT NULL,
+  `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `furnitureId` int(11) NOT NULL,
   KEY `FKCDB06801328C30BB` (`furnitureId`),
   KEY `FKCDB06801F447A673` (`orderId`)
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `order_furniture` (
 --
 
 CREATE TABLE IF NOT EXISTS `order_furniturefeature` (
-  `orderId` int(11) NOT NULL,
+  `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `furnitureFeatureId` int(11) NOT NULL,
   KEY `FK7746D7B5F447A673` (`orderId`),
   KEY `FK7746D7B5DD9D3DC7` (`furnitureFeatureId`)
@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `order_furniturefeature` (
 --
 
 CREATE TABLE IF NOT EXISTS `role` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(255) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `role` (
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `birthday` datetime DEFAULT NULL,
   `email` varchar(60) NOT NULL,
   `firstName` varchar(50) NOT NULL,
