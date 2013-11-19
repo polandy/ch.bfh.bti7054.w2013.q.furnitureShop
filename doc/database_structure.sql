@@ -32,9 +32,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_de` varchar(40) NOT NULL,
   `name_en` varchar(40) NOT NULL,
-  `isOpen` tinyint(1) NOT NULL,
   `orderDate` datetime DEFAULT NULL,
-  `roleId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK6DD211EC2895620` (`roleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
