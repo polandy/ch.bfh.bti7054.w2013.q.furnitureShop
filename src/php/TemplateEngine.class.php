@@ -5,14 +5,9 @@ class TemplateEngine
     var $config;
     var $TEMPLATE_VARS = array();
 
-    function TemplateEngine()
+    function __construct()
     {
-        $this->config = new config();
-    }
-
-    function getconfig()
-    {
-        $this->config = new config();
+        $this->config = Config::getInstance();
     }
 
     function assign($key, $val=null)

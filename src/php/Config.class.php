@@ -1,5 +1,5 @@
 <?php
-class config
+class Config
 {
 
     public $rootDir;
@@ -23,7 +23,9 @@ class config
     public $title;
     public $analytics;
 
-    function config()
+    private static $instance;
+
+    function __construct()
     {
         # The web-css directory
         $this->webStylesDir = "styles/";
@@ -59,17 +61,15 @@ class config
 
         # Page Id's
         $this->pageIds = array(1 => "home",
-            2 => "category");
-
-        # Datenbank verbinden
-        $this->connectDatabase();
-
+            2 => "category",
+            100 => "admin/category");
     }
 
-    # Verbindung zur Datenbank
-    function connectDatabase()
+    public static function getInstance()
     {
+        if (is_null(self::$instance))
+            self::$instance = new Config();
+        return self::$instance;
     }
-
 
 }

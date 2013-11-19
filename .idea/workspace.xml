@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717754eb-bef6-43ae-b738-ee9634589d87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/service/AbstractService.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/php/service/DBService.class.php" />
-      <change type="MOVED" beforePath="C:\dev\xampp\htdocs\furnitureShop\src\php\service\CategoryService.php" afterPath="$PROJECT_DIR$/src/php/service/CategoryService.class.php" />
-      <change type="MOVED" beforePath="C:\dev\xampp\htdocs\furnitureShop\src\php\template_engine.class.php" afterPath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/config.class.php" afterPath="$PROJECT_DIR$/src/php/config.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/database_testData.sql" afterPath="$PROJECT_DIR$/doc/database_testData.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/php/config.class.php" afterPath="$PROJECT_DIR$/src/php/Config.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" afterPath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.php" afterPath="$PROJECT_DIR$/src/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tmpl/navi.tpl.php" afterPath="$PROJECT_DIR$/src/tmpl/navi.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="furnitureShop.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887964008" ignored="false" />
+    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888159687" ignored="false" />
     <file path="$PROJECT_DIR$/../Verkehrssimulation/trunk/doc/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
     <file path="/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
-    <file path="/config.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888044381" ignored="false" />
-    <file path="/index.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887544609" ignored="false" />
+    <file path="/config.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888468867" ignored="false" />
+    <file path="/index.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888449123" ignored="false" />
     <file path="/header.tpl.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383075034099" ignored="false" />
     <file path="/template_engine.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887130020" ignored="false" />
     <file path="/error.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383074416879" ignored="false" />
@@ -45,7 +40,7 @@
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/FurnitureFeature.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094601080" ignored="false" />
     <file path="/FurnitureFeature.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094088810" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/ShoppingCart.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094280570" ignored="false" />
-    <file path="/a.dummy" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384887691790" ignored="false" />
+    <file path="/a.dummy" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888515305" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/vo/b/Order.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094648473" ignored="false" />
     <file path="/Order.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094583908" ignored="false" />
     <file path="$PROJECT_DIR$/../linia-life/trunk/src/main/java/com/linialife/database/dao/RoleDAOImpl.java" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384094505262" ignored="false" />
@@ -102,6 +97,7 @@
     <file path="/database_testData.sql" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384885657197" ignored="false" />
     <file path="/AbstractService" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886095412" ignored="false" />
     <file path="/AbstractService.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384886603978" ignored="false" />
+    <file path="/TemplateEngine.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888486551" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,16 +161,7 @@
       <file leaf-file-name="navi.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tmpl/navi.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Autoloader.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/php/Autoloader.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-12.423077">
+            <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -183,34 +170,16 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.8076923">
+            <state line="8" column="16" selection-start="134" selection-end="134" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.class.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/php/config.class.php">
+      <file leaf-file-name="Config.class.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/php/Config.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.46216768">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="standard_6.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.IntelliJIdea12/config/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_6.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1029" column="9" selection-start="33782" selection-end="33782" vertical-scroll-proportion="-11.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryService.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+            <state line="65" column="0" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.26914153">
               <folding />
             </state>
           </provider>
@@ -235,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/php/model/generic/Role.class.php" />
         <option value="$PROJECT_DIR$/src/php/model/User.class.php" />
         <option value="$PROJECT_DIR$/src/php/model/Order.class.php" />
         <option value="$PROJECT_DIR$/doc/database_testData.sql" />
@@ -244,21 +212,21 @@
         <option value="$PROJECT_DIR$/src/php/service/AbstractService.php" />
         <option value="$PROJECT_DIR$/src/php/service/CategoryService.php" />
         <option value="$PROJECT_DIR$/src/php/template_engine.class.php" />
-        <option value="$PROJECT_DIR$/src/index.php" />
         <option value="$PROJECT_DIR$/src/php/service/AbstractService.class.php" />
-        <option value="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
         <option value="$PROJECT_DIR$/src/php/service/CategoryService.class.php" />
         <option value="$PROJECT_DIR$/src/php/Autoloader.class.php" />
         <option value="$PROJECT_DIR$/src/tmpl/navi.tpl.php" />
+        <option value="$PROJECT_DIR$/src/index.php" />
         <option value="$PROJECT_DIR$/src/php/config.class.php" />
+        <option value="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
+        <option value="$PROJECT_DIR$/src/php/Config.class.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="x" value="-1" />
+    <option name="width" value="1922" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -289,8 +257,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -382,8 +350,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -396,6 +364,118 @@
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model" />
       <recent name="C:\dev\xampp\htdocs\furnitureShop\src\php\model\generic" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/php/Autoloader.class.php</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -417,19 +497,6 @@
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -458,6 +525,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -561,12 +641,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="0" width="1922" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41450217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.098468274" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -577,15 +656,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.58549786" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24946696" sideWeight="0.6717892" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -661,6 +741,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/doc/database_structure.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="157" column="2" selection-start="4300" selection-end="4300" vertical-scroll-proportion="-17.8" />
@@ -675,23 +762,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Order.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.8846154">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.8846154" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Feature.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="48" selection-end="73" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
+        <state line="4" column="23" selection-start="48" selection-end="73" vertical-scroll-proportion="-2.6153846" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Furniure.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="209" selection-end="209" vertical-scroll-proportion="-6.5384617">
-          <folding />
-        </state>
+        <state line="10" column="22" selection-start="209" selection-end="209" vertical-scroll-proportion="-6.5384617" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/service/DBService.class.php">
@@ -703,9 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/User.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
+        <state line="4" column="10" selection-start="35" selection-end="35" vertical-scroll-proportion="-2.6153846" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/model/Category.class.php">
@@ -722,51 +801,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/TemplateEngine.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tmpl/navi.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/Autoloader.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.8076923">
+        <state line="7" column="25" selection-start="251" selection-end="251" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.IntelliJIdea12/config/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_6.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1029" column="9" selection-start="33782" selection-end="33782" vertical-scroll-proportion="-11.5">
+        <state line="1045" column="26" selection-start="34291" selection-end="34291" vertical-scroll-proportion="0.27096775">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/php/config.class.php">
+    <entry file="file://$PROJECT_DIR$/src/php/service/CategoryService.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="847" selection-end="847" vertical-scroll-proportion="0.46216768">
+        <state line="4" column="6" selection-start="33" selection-end="33" vertical-scroll-proportion="0.077419356">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/TemplateEngine.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.10440835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="134" selection-end="134" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/php/Config.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.26914153">
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@ require_once 'php/Autoloader.class.php';
 new Autoloader();
 
 
-$config = new config();
+$config = Config::getInstance();
 $tpl = new TemplateEngine();
 ?>
 
