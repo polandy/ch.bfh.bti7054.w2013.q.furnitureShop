@@ -2,7 +2,7 @@
 
 namespace model;
 
-class Category extends generic\GenericNamedModel {
+class Furniture extends generic\GenericNamedModel {
 
     private $basicPrice;
     private $description_de;

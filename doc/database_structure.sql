@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `db_furnitureshop`
 --
+DROP DATABASE IF EXISTS `db_furnitureshop`;
 CREATE DATABASE `db_furnitureshop` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `db_furnitureshop`;
 
@@ -32,11 +33,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_de` varchar(40) NOT NULL,
   `name_en` varchar(40) NOT NULL,
-  `isOpen` tinyint(1) NOT NULL,
-  `orderDate` datetime DEFAULT NULL,
-  `roleId` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK6DD211EC2895620` (`roleId`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -86,6 +83,21 @@ CREATE TABLE IF NOT EXISTS `furniturefeature` (
   PRIMARY KEY (`id`),
   KEY `FK40748AC4328C30BB` (`furnitureId`),
   KEY `FK40748AC4CCAA4C3` (`featureId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `order`
+--
+
+CREATE TABLE IF NOT EXISTS `order` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`isOpen` tinyint(1) NOT NULL,
+	`orderDate` datetime DEFAULT NULL,
+	`userId` int(11) DEFAULT NULL,
+	KEY `FKCR6F76G324RR2JSA` (`userId`),
+	KEY `FKCHADSF87Z9GFASDF` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -159,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Constraints der Tabelle `order_furniture`
 --
 ALTER TABLE `order_furniture`
-  ADD CONSTRAINT `FKCDB06801F447A673` FOREIGN KEY (`orderId`) REFERENCES `category` (`id`),
+  ADD CONSTRAINT `FKCDB06801F447A673` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`),
   ADD CONSTRAINT `FKCDB06801328C30BB` FOREIGN KEY (`furnitureId`) REFERENCES `furniture` (`id`);
 
 --
@@ -167,7 +179,7 @@ ALTER TABLE `order_furniture`
 --
 ALTER TABLE `order_furniturefeature`
   ADD CONSTRAINT `FK7746D7B5DD9D3DC7` FOREIGN KEY (`furnitureFeatureId`) REFERENCES `furniturefeature` (`id`),
-  ADD CONSTRAINT `FK7746D7B5F447A673` FOREIGN KEY (`orderId`) REFERENCES `category` (`id`);
+  ADD CONSTRAINT `FK7746D7B5F447A673` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`);
 
 --
 -- Constraints der Tabelle `user`
