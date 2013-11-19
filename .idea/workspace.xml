@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717754eb-bef6-43ae-b738-ee9634589d87" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/php/config.class.php" afterPath="$PROJECT_DIR$/src/php/Config.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" afterPath="$PROJECT_DIR$/src/php/TemplateEngine.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.php" afterPath="$PROJECT_DIR$/src/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="furnitureShop.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888159687" ignored="false" />
+    <file path="/Dummy.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888533563" ignored="false" />
     <file path="$PROJECT_DIR$/../Verkehrssimulation/trunk/doc/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
     <file path="/journal.txt" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1383675940533" ignored="false" />
     <file path="/config.class.php" changelist="717754eb-bef6-43ae-b738-ee9634589d87" time="1384888468867" ignored="false" />
@@ -179,7 +176,7 @@
       <file leaf-file-name="Config.class.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/php/Config.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.26914153">
+            <state line="75" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.44315544">
               <folding />
             </state>
           </provider>
@@ -617,7 +614,11 @@
       <created>1384286609350</created>
       <updated>1384286609350</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Config class">
+      <created>1384888536098</created>
+      <updated>1384888536098</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -657,6 +658,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32821077" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -671,7 +673,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -717,7 +718,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="read categories from textFile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config class" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -736,6 +737,7 @@
     <MESSAGE value="redesign" />
     <MESSAGE value="model, php classes" />
     <MESSAGE value="read categories from textFile" />
+    <MESSAGE value="Config class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -838,7 +840,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/php/Config.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.26914153">
+        <state line="75" column="0" selection-start="1632" selection-end="1632" vertical-scroll-proportion="0.44315544">
           <folding />
         </state>
       </provider>
