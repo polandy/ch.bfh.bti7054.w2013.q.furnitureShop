@@ -2,13 +2,14 @@
 
 class config
 {
-    
+
     var $rootDir;
     var $webRootDir;
     var $webCssDir;
     var $webImgDir;
     var $webPhpDir;
     var $phpDir;
+    var $viewDir;
     var $tplDir;
     var $funcDir;
     var $polDir;
@@ -41,6 +42,9 @@ class config
         # The php directory
         $this->phpDir = realpath("./php") . "/";
 
+        # The view directory
+        $this->viewDir = realpath("./php/view") . "/";
+
         # The name of the database
         $this->database = "db_furnitureShop";
 
@@ -57,8 +61,9 @@ class config
         $this->title = "Furniture Shop - ";
 
         # Page Id's
-        $this->pageIds = array( 1 => "home",
-                                2 => "category");
+        $this->pageIds = array(1 => "home",
+            2 => "category",
+            100 => "admin/category");
 
         # Datenbank verbinden
         $this->connectDatabase();

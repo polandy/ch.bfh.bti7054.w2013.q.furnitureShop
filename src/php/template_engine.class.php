@@ -33,6 +33,6 @@ class TemplateEngine
         # Variabeln entpacken, damit $this weggelassen werden kann
         extract(get_object_vars($this));
 
-        include($config->tplDir.$tpl_file.".tpl.php");
+        include($this->config->tplDir.$tpl_file.".tpl.php");
     }
 }

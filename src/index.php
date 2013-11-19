@@ -21,13 +21,13 @@ $tpl = new TemplateEngine();
             $pageId = isset($_GET["pageId"]) ? $_GET["pageId"] : null;
             if (isset($pageId)) {
                 $pageName = $config->pageIds[$pageId];
-                if (!isset($pageName) || !is_file($config->phpDir . $pageName . ".php")) {
+                if (!isset($pageName) || !is_file($config->viewDir . $pageName . ".php")) {
                     $tpl->display("error");
                 } else {
-                    if (include ($config->phpDir . $pageName) . ".php") $tpl->display($pageName); # Only show the template when the inclusion was ok (access...)
+                    if (include ($config->viewDir . $pageName) . ".php") $tpl->display($pageName); # Only show the template when the inclusion was ok (access...)
                 }
             } else {
-                if (include ($config->phpDir . "home") . ".php") $tpl->display("home"); # Only show the template when the inclusion was ok (access...)
+                if (include ($config->viewDir . "home") . ".php") $tpl->display("home"); # Only show the template when the inclusion was ok (access...)
             }
             ?>
         </div>
