@@ -10,15 +10,6 @@ class CategoryService extends AbstractService
         parent::__construct();
     }
 
-    public static function getInstance()
-    {
-        {
-            if (is_null(self::$instance))
-                self::$instance = new CategoryService();
-            return self::$instance;
-        }
-    }
-
     /**
      * @return array with all categories
      */
