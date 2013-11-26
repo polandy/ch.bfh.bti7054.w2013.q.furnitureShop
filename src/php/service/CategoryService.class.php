@@ -15,6 +15,7 @@ class CategoryService extends AbstractService
      */
     public function getAllCategories()
     {
+        return array();
     }
 
     /**
