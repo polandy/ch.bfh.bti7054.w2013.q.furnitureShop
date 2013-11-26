@@ -10,9 +10,9 @@ abstract class AbstractService
     protected  static $instance;
 
     public static function getInstance() {
-        if (is_null(self::$instance))
-            self::$instance = new static();
-        return self::$instance;
+        if (is_null(static::$instance))
+            static::$instance = new static();
+        return static::$instance;
     }
 
     protected function __construct()
