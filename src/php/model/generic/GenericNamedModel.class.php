@@ -10,7 +10,8 @@
 namespace model\generic;
 
 
-class GenericNamedModel extends GenericModel{
+class GenericNamedModel extends GenericModel
+{
 
     public $name_de;
     public $name_en;
@@ -48,5 +49,14 @@ class GenericNamedModel extends GenericModel{
         return $this->name_en;
     }
 
-
+    public function getName()
+    {
+        switch(\Config::getInstance()->language)
+        {
+            case "en":
+                return $this->getNameEn();
+            case "de":
+                return $this->getNameDe();
+        }
+    }
 }

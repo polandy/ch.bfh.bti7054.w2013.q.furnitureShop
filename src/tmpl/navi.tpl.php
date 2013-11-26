@@ -6,7 +6,7 @@
         <ul class="inline-list right">
             <?php
             foreach (\service\CategoryService::getInstance()->getAllCategories() as $cat) {
-                echo '<li><a href="#">'.$cat->getNameEn().'</a></li>';
+                echo '<li><a href="#">'.$cat->getName().'</a></li>';
             }
             ?>
         </ul>

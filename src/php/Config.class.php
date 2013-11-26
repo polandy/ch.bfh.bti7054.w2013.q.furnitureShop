@@ -59,6 +59,9 @@ class Config
         # Title der Webseite
         $this->title = "Furniture Shop - ";
 
+        # Sprache
+        $this->language = "en";
+
         # Page Id's
         $this->pageIds = array(1 => "home",
             2 => "category",

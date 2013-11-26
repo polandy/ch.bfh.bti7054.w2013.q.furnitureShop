@@ -17,7 +17,7 @@ class CategoryService extends AbstractService
     {
         $sth = $this->getDBH()->prepare("SELECT * FROM category;");
         $sth->execute();
-        return $sth->fetchAll(\PDO::FETCH_CLASS, "model\\Category");
+        return $sth->fetchAll(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE, "model\\Category");
     }
 
     /**
