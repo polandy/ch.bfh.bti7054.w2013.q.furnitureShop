@@ -2,15 +2,22 @@
 
 namespace service;
 
-abstract class AbstractService {
+abstract class AbstractService
+{
 
     private $dbService;
 
-   public function __construct() {
-       $this->dbService = DBService::getInstance();
-   }
+    protected  static $instance;
 
-    public function getDBH() {
+    public abstract static function getInstance();
+
+    protected function __construct()
+    {
+        $this->dbService = \service\DBService::getInstance();
+    }
+
+    public function getDBH()
+    {
         return $this->dbService->getDBH();
     }
 

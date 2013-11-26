@@ -17,7 +17,7 @@ class Config
     public $database_user;
     public $database_pw;
     public $database_host;
-    public $oracLink;
+
     public $lang;
     public $charset;
     public $title;
@@ -63,6 +63,11 @@ class Config
         $this->pageIds = array(1 => "home",
             2 => "category",
             100 => "admin/category");
+
+        $this->database = "db_furnitureshop";
+        $this->database_host = "localhost";
+        $this->database_user = "root";
+        $this->database_pw = "";
     }
 
     public static function getInstance()
