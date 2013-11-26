@@ -2,11 +2,14 @@
 
 namespace model;
 
-class Category extends generic\GenericNamedModel {
+class Category extends generic\GenericNamedModel
+{
 
-    function __construct($name_de, $name_en)
+    public function __construct($name_de = NULL, $name_en = NULL)
     {
-        $this->name_de = $name_de;
-        $this->name_en = $name_en;
+        if ($name_de)
+            $this->name_de = $name_de;
+        if ($name_en)
+            $this->name_en = $name_en;
     }
 }

@@ -12,8 +12,8 @@ namespace model\generic;
 
 class GenericNamedModel extends GenericModel{
 
-    protected $name_de;
-    protected $name_en;
+    public $name_de;
+    public $name_en;
 
 
     /**
