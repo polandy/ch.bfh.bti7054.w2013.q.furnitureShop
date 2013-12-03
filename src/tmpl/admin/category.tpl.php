@@ -11,7 +11,7 @@
                     <p>Name de</p>
                 </div>
                 <div class="large-6 columns pull-3">
-                    <input type="text" name="name_de" required="true" pattern="\w{3,}"/>
+                    <input type="text" name="name_de" required="true" pattern="\w{3,}*"/>
                 </div>
             </div>
             <div class="row">
@@ -19,7 +19,7 @@
                     <p>Name en</p>
                 </div>
                 <div class="large-6 columns pull-3">
-                    <input type="text" name="name_en" required="true" pattern="\w{3,}"/>
+                    <input type="text" name="name_en" required="true" pattern="\w{3,}*"/>
                 </div>
             </div>
             <div class="right pull-3">
