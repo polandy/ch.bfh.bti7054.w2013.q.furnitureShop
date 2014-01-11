@@ -12,7 +12,7 @@ namespace model\generic;
 
 class GenericModel {
 
-    private $id;
+    public $id;
 
     /**
      * @param mixed $id

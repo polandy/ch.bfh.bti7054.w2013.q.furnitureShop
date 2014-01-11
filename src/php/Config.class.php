@@ -63,9 +63,12 @@ class Config
         $this->language = "en";
 
         # Page Id's
-        $this->pageIds = array(1 => "home",
+        $this->pageIds = array(
+            1 => "home",
             2 => "category",
-            100 => "admin/category");
+            100 => "admin/category",
+            200 => "admin/furniture",
+            99 => "login");
 
         $this->database = "db_furnitureshop";
         $this->database_host = "localhost";
