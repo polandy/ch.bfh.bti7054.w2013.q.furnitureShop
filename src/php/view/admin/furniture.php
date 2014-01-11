@@ -11,14 +11,13 @@ if (isset($_POST["action"]) && $_POST["action"] == "addFurniture") {
         if (isset($_POST["name_de"]) && isset($_POST["name_en"]) && isset($_POST["price"]) &&
             isset($_POST["desc_de"]) && isset($_POST["desc_en"])
         ) {
-            $furniture = new \model\Furniture($_POST["name_de"], $_POST["name_en"], $_POST["price"], $category, $_POST["desc_de"], $_POST["desc_en"]);
+            $furniture = new \model\Furniture(htmlentities($_POST["name_de"]), htmlentities($_POST["name_en"]), $_POST["price"], $category, htmlentities($_POST["desc_de"]), htmlentities($_POST["desc_en"]));
             $furnitureService = \service\FurnitureService::getInstance();
             $furnitureService->addFurniture($furniture);
+            echo '<span class="success label">saved!</span>';  // TODO Multi Language
         } else {
-            // not all required vals are set!
+            echo '<span class="round alert label">Not all attribute has been set</span>'; // TODO Multi Language
         }
-
-
     }
 //    $catService->addCategory($newCategory);
 }
