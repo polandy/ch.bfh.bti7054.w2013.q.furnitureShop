@@ -26,6 +26,23 @@ class FurnitureService extends AbstractService
     }
 
     /**
+     *
+     * @param $category as object
+     * @return a list of all furnitures of the given category, if category is invalid null is returned
+     */
+    public function findFurnitureByCategory($category) {
+        if ($category == null) {
+            return null;
+        }
+        $sql = "SELECT * FROM Furniture WHERE CategoryId = :category;";
+        $sth = $this->getDBH()->prepare($sql);
+        $sth->bindValue(':category', $category->getId());
+        $sth->execute();
+        return $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Furniture");
+
+    }
+
+    /**
      * Creates a Furniture in the database based on the given object
      * @param $furniture furniture object
      */

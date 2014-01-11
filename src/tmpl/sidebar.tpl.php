@@ -1,12 +1,23 @@
 <div class="large-3 pull-9 columns">
 
     <ul class="side-nav">
-<!--        <li><a href="index.php?pageId=3&catId=--><?//=$catId?><!--">Tische</a></li>-->
-
-        <li><a href="#">Betten</a></li>
-        <li><a href="#">Lampen</a></li>
-        <li><a href="#">Bla 1</a></li>
-        <li><a href="#">Bla 2</a></li>
-        <li><a href="#">Section 6</a></li>
+        <?php
+        if (isset($_GET["pageId"]) && $_GET["pageId"] == Config::getInstance()->getPageIdByValue('category')) {
+            if (isset($_GET["catId"])) {
+                $msgService = \service\MsgService::getInstance();
+                $id = $_GET["catId"];
+                $category = \service\CategoryService::getInstance()->findCategoryById($id);
+                $furnitures = \service\FurnitureService::getInstance()->findFurnitureByCategory($category);
+                foreach ($furnitures as $f) {
+                    echo "<li>";
+                    echo "<a href='#'>" . $msgService->getName($f) . "</a>";
+                    echo "</li>";
+                }
+            } else {
+                // TODO handle no category
+            }
+        }
+        // TODO Möbel für Kategorie aufgelistet
+        ?>
     </ul>
 </div>

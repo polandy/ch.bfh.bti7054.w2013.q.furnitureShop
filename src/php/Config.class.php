@@ -18,7 +18,7 @@ class Config
     public $database_pw;
     public $database_host;
 
-    public $lang;
+    public $language;
     public $charset;
     public $title;
     public $analytics;
@@ -74,6 +74,10 @@ class Config
         $this->database_host = "localhost";
         $this->database_user = "root";
         $this->database_pw = "";
+    }
+
+    public function getPageIdByValue($val) {
+        return (array_search($val, $this->pageIds));
     }
 
     public static function getInstance()

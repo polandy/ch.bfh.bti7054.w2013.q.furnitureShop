@@ -14,9 +14,9 @@ if (isset($_POST["action"]) && $_POST["action"] == "addFurniture") {
             $furniture = new \model\Furniture(htmlentities($_POST["name_de"]), htmlentities($_POST["name_en"]), $_POST["price"], $category, htmlentities($_POST["desc_de"]), htmlentities($_POST["desc_en"]));
             $furnitureService = \service\FurnitureService::getInstance();
             $furnitureService->addFurniture($furniture);
-            echo '<span class="success label">saved!</span>';  // TODO Multi Language
+            \service\MsgService::getInstance()->renderSuccessMsg('savedSuccess');
         } else {
-            echo '<span class="round alert label">Not all attribute has been set</span>'; // TODO Multi Language
+            \service\MsgService::getInstance()->renderSuccessMsg('notAllAttributesSet');
         }
     }
 //    $catService->addCategory($newCategory);
