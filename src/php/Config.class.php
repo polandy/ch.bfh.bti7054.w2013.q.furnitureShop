@@ -60,12 +60,13 @@ class Config
         $this->title = "Furniture Shop - ";
 
         # Sprache
-        $this->language = "en";
+        $this->language = "de";
 
         # Page Id's
         $this->pageIds = array(
             1 => "home",
             2 => "category",
+            3 => "article",
             100 => "admin/category",
             200 => "admin/furniture",
             99 => "login");

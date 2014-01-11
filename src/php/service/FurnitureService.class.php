@@ -39,7 +39,23 @@ class FurnitureService extends AbstractService
         $sth->bindValue(':category', $category->getId());
         $sth->execute();
         return $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Furniture");
+    }
 
+    /**
+     *
+     * @param $category as object
+     * @return furniture with given id
+     */
+    public function findFurnitureById($id)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM Furniture WHERE id = :id;");
+        $sth->bindParam(':id', $id);
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Furniture");
+        if (sizeof($list) > 0) {
+            return $list[0];
+        }
+        return null;
     }
 
     /**

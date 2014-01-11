@@ -1,6 +1,7 @@
 <?php
 
 namespace service;
+use model\Furniture;
 use model\generic\GenericModel;
 use model\generic\GenericNamedModel;
 
@@ -44,7 +45,23 @@ class MsgService extends AbstractService
             $messages = \Messages::getInstance()->getMessages();
             if (!empty($messages)) {
                 $msg = $messages[$model][$lang == 'de' ? 0 : 1];
-                return $msg != null ? msg : $model;
+                return $msg;
+            }
+        }
+    }
+
+    /**
+     * @param $furniture
+     * @return description in appropriate language
+     */
+    public function getDescription($furniture) {
+        $lang = \Config::getInstance()->language;
+        if ($furniture instanceof Furniture) {
+            if ($lang == 'en') {
+                return $furniture->getDescriptionEn();
+            }
+            if ($lang == 'de') {
+                return $furniture->getDescriptionDe();
             }
         }
     }
@@ -61,7 +78,7 @@ class MsgService extends AbstractService
      * @return string styled
      */
     public function getErrorMsg($key) {
-        return '<span class="round alert label">' . $key . '</span>';
+        return '<span class="alert-box alert">' . $key . '</span>';
     }
 
     /**
@@ -78,6 +95,10 @@ class MsgService extends AbstractService
      */
     public function getSuccessMsg($key) {
         return '<span class="success label">' . $this->getName($key) . '</span>';
+    }
+
+    public function renderMsg($key) {
+        echo $this->getName($key);
     }
 
     /**

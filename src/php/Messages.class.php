@@ -24,6 +24,10 @@ class Messages {
                     'savedSuccess' =>
                         array('Erfolgreich gespeichert!', 'Saved successfully'),
                     'notAllAttributesSet' =>
-                        array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.')
+                        array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
+                    'addToChart' =>
+                        array('In den Warenkörb', 'Add to Chart'),
+                    'invalidUrl' =>
+                        array("Fehlerhafte URL.", "Invalid URL.")
     );
 }

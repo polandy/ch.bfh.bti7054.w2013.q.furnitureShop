@@ -7,6 +7,12 @@ new Autoloader();
 
 $config = Config::getInstance();
 $tpl = new TemplateEngine();
+/**
+ * Services
+ */
+
+$furnitureService = \service\FurnitureService::getInstance();
+
 ?>
 
 <html>
@@ -34,7 +40,6 @@ $tpl = new TemplateEngine();
         <!-- Load Sidebar -->
         <!-- This is source ordered to be pulled to the left on larger screens -->
         <?php $tpl->display("sidebar"); ?>
-
 
     </div>
 
