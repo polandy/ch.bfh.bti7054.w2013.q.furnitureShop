@@ -69,6 +69,8 @@ class Config
             3 => "article",
             100 => "admin/category",
             200 => "admin/furniture",
+            97 => "register",
+            98 => "logout",
             99 => "login");
 
         $this->database = "db_furnitureshop";
@@ -77,7 +79,6 @@ class Config
         $this->database_pw = "";
 
         $this->user = null;
-        $_SESSION["user_id"] = 1;
     }
 
     /**

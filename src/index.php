@@ -19,7 +19,10 @@ $furnitureService = \service\FurnitureService::getInstance();
 <?php $tpl->display("header"); ?>
 <body>
 <div class="wrapper">
-    <?php $tpl->display("navi"); ?>
+    <?php
+    include ($config->viewDir . "navi.php");
+    $tpl->display("navi");
+    ?>
     <div class="row">
         <div class="large-9 push-3 columns">
             <?php
