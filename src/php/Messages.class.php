@@ -70,6 +70,7 @@ class Messages
         "pdf_totalPrice" => array("Total", "Total"),
         "pdf_" => array("", ""),
 
+        "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
         "login_title"=>array("Login", "Login"),

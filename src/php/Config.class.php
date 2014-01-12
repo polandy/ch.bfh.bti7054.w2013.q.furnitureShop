@@ -69,6 +69,7 @@ class Config
             1 => "home",
             2 => "category",
             3 => "article",
+            4 => 'impressum',
             100 => "admin/category",
             200 => "admin/furniture",
             403 => "accessDenied",

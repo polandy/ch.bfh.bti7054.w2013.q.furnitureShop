@@ -11,8 +11,8 @@
                     if (Config::getInstance()->isAdmin()) { ?>
                         <li><a href="?pageId=100"><?=$TPL['createCategory']?></a></li>
                         <li><a href="?pageId=200"><?=$TPL['createFurniture']?></a></li>
-
                     <?php } // end if ?>
+                        <li><a href="?pageId=4"><?=$TPL['impressum']?></a></li>
                 </ul>
             </div>
             <div class="large-1 columns">
