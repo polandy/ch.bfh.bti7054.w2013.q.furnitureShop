@@ -59,6 +59,15 @@ class Messages
         "furniture_feature_additionalPrice" => array("Preiszuschlag", 'Additional price'),
         "furniture_feature_btnLabel" => array("Hinzufügen", 'Add'),
 
+        "pdf_title" => array("Bestellbestätigung", 'Order confirmation'),
+        "pdf_furniture" => array("Möbel", 'Furniture'),
+        "pdf_feature" => array("Extra", 'Feature'),
+        "pdf_quantity" => array("Anzahl", 'Quantity'),
+        "pdf_price" => array("Preis", 'Price'),
+        "pdf_orderDate" => array("Bestelldatum", "Order date"),
+        "pdf_totalPrice" => array("Total", "Total"),
+        "pdf_" => array("", ""),
+
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
         "login_title"=>array("Name", "Name"),
