@@ -23,6 +23,7 @@ class Messages
      * index 1 -> en
      */
     var $messages = array(
+        'accessDenied' => array('Sie haben keine Berechtigung auf diese Seite zuzugreifen', 'You are not allowed to access this page'),
         'savedSuccess' =>
         array('Erfolgreich gespeichert!', 'Saved successfully'),
         'notAllAttributesSet' =>
@@ -40,11 +41,20 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
-        "login_title" => array("Login", "Login"),
-        "login_name" => array("Name", "Name"),
-        "login_password" => array("Passwort", "Password"),
-        "login_failed" => array("Benutzername und Password stimmen nich überein", "Username and password do not match"),
-        "login_login" => array("Login", "Login"),
+        "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
+        "furniture_edit" => array("Ein Möbel bearbeiten", "Edit furniture"),
+        "furniture_admin" => array("Admin Möbel", "Admin furniture"),
+        "furniture_creatBtn" => array("Erstellen", "Create"),
+        "furniture_save" => array("Speichern", "Save"),
+        "furniture_notFound" => array("Angegebenes Möbel wurde nicht gefunden", "Given Furniture ist not available."),
+
+        "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
+        "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
+        "login_title"=>array("Name", "Name"),
+        "login_name"=>array("Name", "Name"),
+        "login_password"=>array("Passwort", "Password"),
+        "login_failed"=>array("Benutzername und Password stimmen nich überein", "Username and password do not match"),
+        "login_login"=>array("Login", "Login"),
         "navi_logout" => array("Abmelden", "Logout"),
         "navi_loggedinAs" => array("Hallo ", "Hello "),
         "navi_register" => array("Registrieren", "Register"),

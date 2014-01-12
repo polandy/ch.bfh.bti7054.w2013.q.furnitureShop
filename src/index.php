@@ -50,7 +50,10 @@ $furnitureService = \service\FurnitureService::getInstance();
 </div>
 
 
-<?php $tpl->display("footer"); ?>
+<?php
+include ($config->viewDir . "footer.php");
+$tpl->display("footer");
+?>
 </div>
 <!--wrapper div-->
 </body>

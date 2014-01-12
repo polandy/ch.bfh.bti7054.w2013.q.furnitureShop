@@ -77,4 +77,27 @@ class FurnitureService extends AbstractService
         );
     }
 
+    /**
+     * @param $furniture object you want to update with all given update parameters
+     */
+    public function updateFurniture($furniture) {
+        if (isset($furniture) && isset($furniture->id)) {
+            $sql = "UPDATE Furniture SET basicPrice = :price, description_de = :desc_de, description_en = :desc_en, name_de = :name_de, name_en = :name_en, categoryId = :category WHERE id = :id";
+            $sth = $this->getDBH()->prepare($sql);
+            $sth->execute(array(
+                    ':price' => $furniture->getBasicPrice(),
+                    ':desc_de' => $furniture->getDescriptionDe(),
+                    ':desc_en' => $furniture->getDescriptionEn(),
+                    ':name_de' => $furniture->getNameDe(),
+                    ':name_en' => $furniture->getNameEn(),
+                    ':category' => $furniture->getCategory()->getId(),
+                    ':id' => $furniture->getId()
+            ));
+        }
+        else {
+            // TODO handle error
+            echo 'invalides objekt';
+        }
+    }
+
 }
