@@ -50,4 +50,20 @@ class UserService extends AbstractService
         }
         return null;
     }
+
+    /**
+     * @param $name
+     * @return a single user found by the given name
+     */
+    public function findUserByName($name)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM user WHERE username = :name;");
+        $sth->bindParam(':name', $name);
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\User");
+        if (sizeof($list) > 0) {
+            return $list[0];
+        }
+        return null;
+    }
 }
