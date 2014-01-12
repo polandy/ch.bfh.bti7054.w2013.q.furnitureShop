@@ -1,3 +1,7 @@
+<?php
+// Register / update profile page
+?>
+
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">

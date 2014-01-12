@@ -1,3 +1,6 @@
+<?php
+// Navigation page (above with categories and search)
+?>
 <div class="row">
     <div class="large-3 columns">
         <a href='./index.php'><h1><img src="http://placehold.it/400x100&text=Möbius"/>furniturus</h1></a>

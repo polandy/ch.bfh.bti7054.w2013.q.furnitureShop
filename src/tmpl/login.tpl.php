@@ -1,3 +1,7 @@
+<?php
+// Login page
+?>
+
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">
