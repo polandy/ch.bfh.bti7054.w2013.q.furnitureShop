@@ -46,6 +46,10 @@ class Messages
         "furniture_admin" => array("Admin Möbel", "Admin furniture"),
         "furniture_creatBtn" => array("Erstellen", "Create"),
         "furniture_save" => array("Speichern", "Save"),
+        "furniture_notFound" => array("Angegebenes Möbel wurde nicht gefunden", "Given Furniture ist not available."),
+
+        "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
+        "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
         "login_title"=>array("Name", "Name"),
         "login_name"=>array("Name", "Name"),
         "login_password"=>array("Passwort", "Password"),

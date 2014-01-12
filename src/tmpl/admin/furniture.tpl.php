@@ -1,8 +1,9 @@
+<?php $f = $TPL['furniture'] ?>
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">
 
-        <h3>Create a furniture</h3>
+        <h3><?=$TPL["title"]?></h3>
 
         <form method="POST">
             <div class="row">
@@ -28,7 +29,7 @@
                     <p>Furniture name de</p>
                 </div>
                 <div class="large-6 columns pull-2">
-                    <input type="text" name="name_de" required="true" pattern="\w{3,}*" value="deVal"/>
+                    <input type="text" name="name_de" required="true" pattern="\w{3,}*" value="<?=$f->getNameDe();?>"/>
                 </div>
             </div>
             <!-- Name EN -->
@@ -37,7 +38,7 @@
                     <p>Furniture name en</p>
                 </div>
                 <div class="large-6 columns pull-2">
-                    <input type="text" name="name_en" required="true" pattern="\w{3,}*" value="enVal"/>
+                    <input type="text" name="name_en" required="true" pattern="\w{3,}*" value="<?=$f->getNameEn();?>"/>
                 </div>
             </div>
             <!-- Price -->
@@ -46,7 +47,7 @@
                     <p>Price</p>
                 </div>
                 <div class="large-6 columns pull-2">
-                    <input type="text" name="price" required="true" pattern="[-+]?[0-9]*\.?[0-9]*" value="100.5"/>
+                    <input type="text" name="price" required="true" pattern="[-+]?[0-9]*\.?[0-9]*" value="<?=$f->getBasicPrice();?>"/>
                 </div>
             </div>
 
@@ -56,7 +57,7 @@
                     <p>Description de</p>
                 </div>
                 <div class="large-6 columns pull-2">
-                    <textarea required="true" name="desc_de">fsdf</textarea>
+                    <textarea required="true" name="desc_de"><?=$f->getDescriptionDe();?></textarea>
                 </div>
             </div>
 
@@ -66,14 +67,14 @@
                     <p>Description en</p>
                 </div>
                 <div class="large-6 columns pull-2">
-                    <textarea required="true" name="desc_en">fsdfsd</textarea>
+                    <textarea required="true" name="desc_en"><?=$f->getDescriptionEn();?></textarea>
                 </div>
             </div>
 
 
             <div class="right pull-2">
-                <input type="hidden" name="action" value="addFurniture" />
-                <input type="submit" value="Add" class="button"/>
+                <input type="hidden" name="action" value="<?=$TPL['btnAction']?>" />
+                <input type="submit" value="<?=$TPL['btnLabel']?>" class="button"/>
             </div>
         </form>
     </div>
