@@ -8,7 +8,7 @@
         <form method="POST">
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Category</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_category')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <?php
@@ -26,7 +26,7 @@
             <!-- Name DE -->
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Furniture name de</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_nameDe')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <input type="text" name="name_de" required="true" pattern="\w{3,}*" value="<?=$f->getNameDe();?>"/>
@@ -35,7 +35,7 @@
             <!-- Name EN -->
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Furniture name en</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_nameEn')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <input type="text" name="name_en" required="true" pattern="\w{3,}*" value="<?=$f->getNameEn();?>"/>
@@ -44,7 +44,7 @@
             <!-- Price -->
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Price</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_price')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <input type="text" name="price" required="true" pattern="[-+]?[0-9]*\.?[0-9]*" value="<?=$f->getBasicPrice();?>"/>
@@ -54,7 +54,7 @@
             <!-- Description DE -->
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Description de</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_descriptionDe')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <textarea required="true" name="desc_de"><?=$f->getDescriptionDe();?></textarea>
@@ -64,7 +64,7 @@
             <!-- Description DE -->
             <div class="row">
                 <div class="large-4 columns">
-                    <p>Description en</p>
+                    <p><?=$TPL['msg']->getMsg('furniture_descriptionEn')?></p>
                 </div>
                 <div class="large-6 columns pull-2">
                     <textarea required="true" name="desc_en"><?=$f->getDescriptionEn();?></textarea>
@@ -78,6 +78,9 @@
             </div>
         </form>
     </div>
+
+
+
 
 
 </div>

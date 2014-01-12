@@ -47,6 +47,12 @@ class Messages
         "furniture_creatBtn" => array("Erstellen", "Create"),
         "furniture_save" => array("Speichern", "Save"),
         "furniture_notFound" => array("Angegebenes Möbel wurde nicht gefunden", "Given Furniture ist not available."),
+        "furniture_category" => array("Kategorie", 'Category'),
+        "furniture_nameDe" => array("Deutsche Bezeichnung", 'German name'),
+        "furniture_nameEn" => array("Englische Bezeichnung", 'English name'),
+        "furniture_price" => array("Preis", 'Price'),
+        "furniture_descriptionDe" => array("Deutsche Beschreibung", 'German description'),
+        "furniture_descriptionEn" => array("Englische Beschreibung", 'English description'),
 
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
