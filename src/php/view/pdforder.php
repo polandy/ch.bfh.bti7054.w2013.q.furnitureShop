@@ -6,7 +6,7 @@ new Autoloader();
 $pdf = new \service\PDFOrderService();
 $pdf->AliasNbPages();
 $pdf->AddPage();
-$pdf->SetFont('Times','',12);
+$pdf->SetFont('Arial','',15);
 $order = null;
 $user = null;
 $pdf->OrderHeader($order, $user);

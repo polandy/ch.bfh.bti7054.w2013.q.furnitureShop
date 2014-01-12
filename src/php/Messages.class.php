@@ -72,11 +72,12 @@ class Messages
 
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),
-        "login_title"=>array("Name", "Name"),
+        "login_title"=>array("Login", "Login"),
         "login_name"=>array("Name", "Name"),
         "login_password"=>array("Passwort", "Password"),
         "login_failed"=>array("Benutzername und Password stimmen nich überein", "Username and password do not match"),
         "login_login"=>array("Login", "Login"),
+        "login_register"=>array("oder registrieren Sie sich", "or register here"),
         "navi_logout" => array("Abmelden", "Logout"),
         "navi_loggedinAs" => array("Hallo ", "Hello "),
         "navi_register" => array("Registrieren", "Register"),

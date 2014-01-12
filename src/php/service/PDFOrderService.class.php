@@ -11,24 +11,23 @@ class PDFOrderService extends \FPDF
         // Arial bold 15
         $this->SetFont('Arial', 'B', 15);
         // Move to the right
-        $this->Cell(80);
+        $this->Cell(50);
         // Title
-        $this->Cell(30, 10, $msgSrv->getName("pdf_title"));
+        $this->Cell(30, 10, utf8_decode("Möbius Furniturus - ".$msgSrv->getName("pdf_title")));
         // Line break
         $this->Ln(20);
     }
 
     function OrderHeader($order, $user)
     {
-        $this->SetFont('Arial', '', 15);
         $msgSrv = MsgService::getInstance();
 
-        $this->Cell(200, 7, "Name lastname");
+        $this->Cell(200, 7, utf8_decode("Name lastname"));
         $this->Ln(5);
-        $this->Cell(200, 7, "Address");
+        $this->Cell(200, 7, utf8_decode("Address"));
         $this->Ln(5);
-        $this->Cell(10, 7, "ZIP");
-        $this->Cell(200, 7, "Place");
+        $this->Cell(10, 7, utf8_decode("ZIP"));
+        $this->Cell(200, 7, utf8_decode("Place"));
         $this->Ln(10);
 
         $this->SetFont('Arial', 'B', 15);
@@ -44,10 +43,10 @@ class PDFOrderService extends \FPDF
         $msgSrv = MsgService::getInstance();
         // Header
         $this->SetFont('Arial', 'B', 15);
-        $this->Cell(40, 7, $msgSrv->getName("pdf_furniture"), 1);
-        $this->Cell(40, 7, $msgSrv->getName("pdf_feature"), 1);
-        $this->Cell(40, 7, $msgSrv->getName("pdf_quantity"), 1);
-        $this->Cell(40, 7, $msgSrv->getName("pdf_price"), 1);
+        $this->Cell(40, 7, utf8_decode($msgSrv->getName("pdf_furniture")), 1);
+        $this->Cell(40, 7, utf8_decode($msgSrv->getName("pdf_feature")), 1);
+        $this->Cell(40, 7, utf8_decode($msgSrv->getName("pdf_quantity")), 1);
+        $this->Cell(40, 7, utf8_decode($msgSrv->getName("pdf_price")), 1);
         $this->SetFont('Arial', '', 15);
         $this->Ln();
         // Data
