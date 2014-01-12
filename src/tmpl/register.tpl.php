@@ -2,7 +2,7 @@
     <!-- Main Content Section -->
     <div class="large-9 columns">
 
-        <h3><?= $TPL["msg"]->getName("register_title") ?></h3>
+        <h3><?= $TPL["title"]?></h3>
 
         <form method="POST">
             <div class="row">

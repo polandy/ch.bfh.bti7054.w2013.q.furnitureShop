@@ -14,7 +14,8 @@ else
 
 $updateProfile = $loggedinUser != null;
 $tpl->assign("updateProfile", $updateProfile);
-$tpl->assign("actionName", $updateProfile ? $msgService->getName("register_update") : $msgService->getName("register_register"));
+$tpl->assign("actionName", $updateProfile ? $msgService->getName("register_save") : $msgService->getName("register_register"));
+$tpl->assign("title", $updateProfile ? $msgService->getName("register_update") : $msgService->getName("register_title"));
 
 if (isset($_POST["firstName"])) {
     $user->firstName = $_POST["firstName"];
