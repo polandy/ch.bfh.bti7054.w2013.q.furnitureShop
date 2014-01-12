@@ -18,7 +18,7 @@ class Config
     public $database_pw;
     public $database_host;
 
-    public $lang;
+    public $language;
     public $charset;
     public $title;
     public $analytics;
@@ -60,17 +60,25 @@ class Config
         $this->title = "Furniture Shop - ";
 
         # Sprache
-        $this->language = "en";
+        $this->language = "de";
 
         # Page Id's
-        $this->pageIds = array(1 => "home",
+        $this->pageIds = array(
+            1 => "home",
             2 => "category",
-            100 => "admin/category");
+            3 => "article",
+            100 => "admin/category",
+            200 => "admin/furniture",
+            99 => "login");
 
         $this->database = "db_furnitureshop";
         $this->database_host = "localhost";
         $this->database_user = "root";
         $this->database_pw = "";
+    }
+
+    public function getPageIdByValue($val) {
+        return (array_search($val, $this->pageIds));
     }
 
     public static function getInstance()
