@@ -29,7 +29,7 @@
                 </div>
             <?php } ?>
             <div class="right pull-3">
-                <input type="submit" value="Login" class="button"/>
+                <input type="submit" value="<?= $TPL["msg"]->getName("login_login") ?>" class="button"/>
             </div>
         </form>
     </div>

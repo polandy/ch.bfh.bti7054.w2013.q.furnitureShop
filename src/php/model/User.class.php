@@ -2,7 +2,8 @@
 
 namespace model;
 
-class User extends generic\GenericModel {
+class User extends generic\GenericModel
+{
 
     public $birthday;
     public $email;
@@ -13,5 +14,9 @@ class User extends generic\GenericModel {
     public $newsletterEnabled;
     public $password;
     public $username;
-    public  $roleId;
+    public $roleId;
+    public $address;
+    public $zip;
+    public $place;
+    public $tel;
 }

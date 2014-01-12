@@ -40,7 +40,7 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
-        "login_title" => array("Name", "Name"),
+        "login_title" => array("Login", "Login"),
         "login_name" => array("Name", "Name"),
         "login_password" => array("Passwort", "Password"),
         "login_failed" => array("Benutzername und Password stimmen nich überein", "Username and password do not match"),
@@ -51,6 +51,9 @@ class Messages
         "register_title" => array("Registrieren", "Register"),
         "register_firstname" => array("Vorname", "First name"),
         "register_lastname" => array("Nachname", "Last name"),
+        "register_address" => array("Adresse", "Address"),
+        "register_zip" => array("PLZ", "ZIP"),
+        "register_tel" => array("Telefon", "Phone"),
         "register_sex" => array("Geschlecht", "Sex"),
         "register_female" => array("Weiblein", "Female"),
         "register_male" => array("Männlein", "Male"),
@@ -58,7 +61,18 @@ class Messages
         "register_username" => array("Benutzername", "Username"),
         "register_password" => array("Passwort", "Password"),
         "register_passwordVerify" => array("Passwort bestätigen", "Password verify"),
-        "register_" => array("", ""),
+        "register_register" => array("Registrieren", "Register"),
+        "register_update" => array("Speichern", "Save"),
+        "register_errFirstName" => array("Bitte einen Vornamen eingeben", "Please enter a first name"),
+        "register_errLastName" => array("Bitte einen Nachnamen eingeben", "Please enter a last name"),
+        "register_errAddress" => array("Bitte eine Adresse eingeben", "Please enter an address"),
+        "register_errZip" => array("Bitte eine gültige PLZ angeben", "Please enter a valid ZIP code"),
+        "register_errTel" => array("Bitte eine gültige Telefonnummer (nur Zahlen) angeben", "Please enter a valid phone number (numbers only)"),
+        "register_errEmail" => array("Bitte eine gültige, noch nicht verwendete Email angeben", "Please enter a valid, not already registered email"),
+        "register_errUsername" => array("Bitte einen noch nicht verwendeten Benutzernamen angeben (nur Buchstaben, Zahlen, _, -)", "Please enter not already registered username (only letters, numbers, _, -)"),
+        "register_errPassword" => array("Passwort muss mindestens 4 Zeichen haben", "Password must be at least 4 characters long"),
+        "register_errPasswordVerify" => array("Passwort bitte korrekt wiederholen", "Please repeat the password correctly"),
+        "register_success" => array("Gespeichert", "Saved"),
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
     );
 }

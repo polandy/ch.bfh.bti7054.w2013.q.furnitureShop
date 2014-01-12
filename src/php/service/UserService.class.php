@@ -18,7 +18,8 @@ class UserService extends AbstractService
     /**
      * @return an instance of the UserService
      */
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (is_null(static::$instance) || !static::$instance instanceof UserService) {
             static::$instance = new static();
         }
@@ -64,6 +65,46 @@ class UserService extends AbstractService
         if (sizeof($list) > 0) {
             return $list[0];
         }
+        return null;
+    }
+
+    /**
+     * @param $email
+     * @return a single user found by the given email
+     */
+    public function findUserByEmail($email)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM user WHERE email = :email;");
+        $sth->bindParam(':email', $email);
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\User");
+        if (sizeof($list) > 0) {
+            return $list[0];
+        }
+        return null;
+    }
+
+    /**
+     * @param $user Model::User object to be updated
+     */
+    public function updateUser($user)
+    {
+        $sth = $this->getDBH()->prepare("REPLACE INTO user (id, email, firstName, lastName, male, password, username, address, zip, place, tel, roleId)
+        VALUES (:id, :email, :firstName, :lastName, :male, :password, :username, :address, :zip, :place, :tel, :roleId);");
+
+        $sth->bindParam(':id', $user->id);
+        $sth->bindParam(':email', $user->email);
+        $sth->bindParam(':firstName', $user->firstName);
+        $sth->bindParam(':lastName', $user->lastName);
+        $sth->bindParam(':male', $user->male);
+        $sth->bindParam(':password', $user->password);
+        $sth->bindParam(':username', $user->username);
+        $sth->bindParam(':address', $user->address);
+        $sth->bindParam(':zip', $user->zip);
+        $sth->bindParam(':place', $user->place);
+        $sth->bindParam(':tel', $user->tel);
+        $sth->bindValue(':roleId', $user->roleId ? $user->roleId : 2); // 2 is the standard user role
+        $sth->execute();
         return null;
     }
 }
