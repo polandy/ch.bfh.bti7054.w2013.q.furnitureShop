@@ -31,6 +31,8 @@ class Messages
         array('In den Warenkörb', 'Add to Chart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
+        'edit' =>
+        array('Bearbeiten', 'Edit'),
         'homepage' => array(
             "<h4>Zuhause sein?</h4>
             <h4>Sich wohl fühlen?</h4>
@@ -57,5 +59,6 @@ class Messages
         "register_password" => array("Passwort", "Password"),
         "register_passwordVerify" => array("Passwort bestätigen", "Password verify"),
         "register_" => array("", ""),
+        "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
     );
 }
