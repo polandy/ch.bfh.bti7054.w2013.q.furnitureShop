@@ -31,6 +31,8 @@ class Messages
         array('In den Warenkörb', 'Add to Chart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
+        'edit' =>
+        array('Bearbeiten', 'Edit'),
         'homepage' => array(
             "<h4>Zuhause sein?</h4>
             <h4>Sich wohl fühlen?</h4>
@@ -38,6 +40,7 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
+        "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
         "login_title"=>array("Name", "Name"),
         "login_name"=>array("Name", "Name"),
         "login_password"=>array("Passwort", "Password"),
