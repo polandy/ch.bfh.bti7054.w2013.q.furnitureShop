@@ -1,0 +1,1 @@
+<?php echo Config::getInstance()->isAdmin() ? "Admin" : "no rights"; ?>

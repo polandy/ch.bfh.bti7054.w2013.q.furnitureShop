@@ -1,17 +1,19 @@
 <?php
-if ((isset($_POST["action"]) && $_POST["action"] == "addToChart") &&
-    (isset($_POST["f"]))) {
-    $fs = \service\FurnitureService::getInstance();
-    $furniture = $fs->findFurnitureById($_POST["f"]);
-    if ($furniture == null) {
-        echo "Furniture not found!"; //TODO handle!
-    }
-//    $chart = $_SESSION['chart'];
-//    if ($chart == null) {
-//        $chart = array();
-//    }
-//    $chart[] = $furniture;
-//    $_SESSION['chart'] = $chart;
+global $tpl;
 
-//    print_r($chart);
+
+$articlePageId = Config::getInstance()->getPageIdByValue('article');
+$furniture = null;
+$msgService = \service\MsgService::getInstance();
+if (isset($_GET["pageId"]) && $_GET["pageId"] == $articlePageId && isset($_GET["f"])) {
+    $furnitureService = \service\FurnitureService::getInstance();
+    $furnitureId = $_GET["f"];
+    $furniture = $furnitureService->findFurnitureById($furnitureId);
+} else {
+    // TODO invalid URL
 }
+
+$tpl->assign("name", $msgService->getName($furniture));
+$tpl->assign("desc", $msgService->getDescription($furniture));
+$tpl->assign("furnitureId", isset($furniture) ? $furniture->getId() : "");
+$tpl->assign("addToChart", $msgService->getMsg('addToChart'));
