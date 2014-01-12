@@ -37,6 +37,11 @@ class Messages
             <h4>Wir richten es ein!</h4>",
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
-            <h4>We furnish it!</h4>")
+            <h4>We furnish it!</h4>"),
+        "login_title"=>array("Name", "Name"),
+        "login_name"=>array("Name", "Name"),
+        "login_password"=>array("Passwort", "Password"),
+        "login_failed"=>array("Benutzername und Password stimmen nich überein", "Username and password do not match"),
+        "login_login"=>array("Login", "Login"),
     );
 }

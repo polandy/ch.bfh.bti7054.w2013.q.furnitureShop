@@ -24,6 +24,8 @@ class TemplateEngine
         # Kurze Referenz auf die Template-Variable
         $TPL = &$this->TEMPLATE_VARS;
 
+        $TPL["msg"] = \service\MsgService::getInstance();
+
         # Variabeln entpacken, damit $this weggelassen werden kann
         extract(get_object_vars($this));
 
