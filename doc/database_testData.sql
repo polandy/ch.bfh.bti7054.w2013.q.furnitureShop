@@ -2,8 +2,9 @@ USE db_furnitureShop;
 
 INSERT INTO role (id, name, description) VALUES (1, 'admin', 'Administrator'), (2, 'default', 'Default role');
 
-INSERT INTO user (id, birthday, email, lastLogin, firstName, lastName, male, newsletterEnabled, password, username, roleId) VALUES(1, '2013-01-01', 'hero@mailinator.com', '2013-11-11', 'Hero', 'Superman', 1, 1, 'e24b801c310567e96f84c3c33ad20e38fb10a7ac', 'hero', 1);
-INSERT INTO user (id, birthday, email, lastLogin, firstName, lastName, male, newsletterEnabled, password, username, roleId) VALUES(2, '2013-01-01', 'gigu@mailinator.com', '2013-11-11', 'Gigu', 'Wixxer', 1, 1, 'e24b801c310567e96f84c3c33ad20e38fb10a7ac', 'gigu', 2);
+INSERT INTO user (id, birthday, email, lastLogin, firstName, lastName, male, newsletterEnabled, password, username, roleId, address, zip, place, tel) VALUES
+(1, '2013-01-01', 'hero@mailinator.com', '2013-11-11', 'Hero', 'Superman', 1, 1, 'e24b801c310567e96f84c3c33ad20e38fb10a7ac', 'hero', 1, "myStreet 1", 3512, "Walkringen", "078 897 87 45"),
+(2, '2013-01-01', 'gigu@mailinator.com', '2013-11-11', 'Gigu', 'Wixxer', 1, 1, 'e24b801c310567e96f84c3c33ad20e38fb10a7ac', 'gigu', 2, "yourStreet 2", 3000, "Bern", "078 123 45 67");
 
 INSERT INTO `category` (`id`, `name_de`, `name_en`) VALUES
 (1, 'Betten', 'Bed'),

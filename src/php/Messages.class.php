@@ -61,6 +61,9 @@ class Messages
         "register_title" => array("Registrieren", "Register"),
         "register_firstname" => array("Vorname", "First name"),
         "register_lastname" => array("Nachname", "Last name"),
+        "register_address" => array("Adresse", "Address"),
+        "register_zip" => array("PLZ", "ZIP"),
+        "register_tel" => array("Telefon", "Phone"),
         "register_sex" => array("Geschlecht", "Sex"),
         "register_female" => array("Weiblein", "Female"),
         "register_male" => array("Männlein", "Male"),
@@ -70,5 +73,6 @@ class Messages
         "register_passwordVerify" => array("Passwort bestätigen", "Password verify"),
         "register_" => array("", ""),
         "404_pageNotFound" => array("Die angeforderte Seite wurde nicht gefunden.", "The requested page ist not available.")
+
     );
 }
