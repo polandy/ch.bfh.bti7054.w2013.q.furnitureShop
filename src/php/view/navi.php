@@ -7,4 +7,3 @@ $tpl->assign("loggedin", $user != null);
 if($user != null){
     $tpl->assign("name", $user->firstName." ".$user->lastName);
 }
-

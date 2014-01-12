@@ -2,7 +2,7 @@
     <div class="large-12 columns">
         <hr/>
         <div class="row">
-            <div class="large-6 columns">
+            <div class="large-5 columns">
                 <p>&copy; 2013–2013 M&ouml;bius Furniturus, Inc. All rights reserved.</p>
             </div>
             <div class="large-6 columns">
@@ -14,6 +14,10 @@
 
                     <?php } // end if ?>
                 </ul>
+            </div>
+            <div class="large-1 columns">
+                <a href='./index.php?lang=de'>de</a> /
+                <a href='./index.php?lang=en'>en</a>
             </div>
         </div>
     </div>

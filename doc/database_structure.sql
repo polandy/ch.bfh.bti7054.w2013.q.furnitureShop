@@ -36,18 +36,6 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `feature`
---
-
-CREATE TABLE IF NOT EXISTS `feature` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name_de` varchar(40) NOT NULL,
-  `name_en` varchar(40) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -73,16 +61,14 @@ CREATE TABLE IF NOT EXISTS `furniture` (
 -- Tabellenstruktur für Tabelle `furniturefeature`
 --
 
-CREATE TABLE IF NOT EXISTS `furniturefeature` (
+CREATE TABLE IF NOT EXISTS `feature` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `extraPrice` int(11) NOT NULL,
   `value_de` varchar(256) NOT NULL,
   `value_en` varchar(256) NOT NULL,
-  `featureId` int(11) DEFAULT NULL,
   `furnitureId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `FK40748AC4328C30BB` (`furnitureId`),
-  KEY `FK40748AC4CCAA4C3` (`featureId`)
+  KEY `FK40748AC4328C30BB` (`furnitureId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -109,21 +95,10 @@ CREATE TABLE IF NOT EXISTS `order` (
 CREATE TABLE IF NOT EXISTS `order_furniture` (
   `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `furnitureId` int(11) NOT NULL,
+  `featureId` int(11) NOT NULL,
   KEY `FKCDB06801328C30BB` (`furnitureId`),
+  KEY `FKCDB06801328C30B8` (`featureId`),
   KEY `FKCDB06801F447A673` (`orderId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `order_furniturefeature`
---
-
-CREATE TABLE IF NOT EXISTS `order_furniturefeature` (
-  `orderId` int(11) NOT NULL AUTO_INCREMENT,
-  `furnitureFeatureId` int(11) NOT NULL,
-  KEY `FK7746D7B5F447A673` (`orderId`),
-  KEY `FK7746D7B5DD9D3DC7` (`furnitureFeatureId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -176,14 +151,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 ALTER TABLE `order_furniture`
   ADD CONSTRAINT `FKCDB06801F447A673` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`),
-  ADD CONSTRAINT `FKCDB06801328C30BB` FOREIGN KEY (`furnitureId`) REFERENCES `furniture` (`id`);
-
---
--- Constraints der Tabelle `order_furniturefeature`
---
-ALTER TABLE `order_furniturefeature`
-  ADD CONSTRAINT `FK7746D7B5DD9D3DC7` FOREIGN KEY (`furnitureFeatureId`) REFERENCES `furniturefeature` (`id`),
-  ADD CONSTRAINT `FK7746D7B5F447A673` FOREIGN KEY (`orderId`) REFERENCES `order` (`id`);
+  ADD CONSTRAINT `FKCDB06801328C30BB` FOREIGN KEY (`furnitureId`) REFERENCES `furniture` (`id`),
+  ADD CONSTRAINT `FKCDB06801328C30B8` FOREIGN KEY (`featureId`) REFERENCES `feature` (`id`);
 
 --
 -- Constraints der Tabelle `user`

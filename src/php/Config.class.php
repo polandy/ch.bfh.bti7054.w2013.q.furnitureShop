@@ -60,7 +60,9 @@ class Config
         $this->title = "Furniture Shop - ";
 
         # Sprache
-        $this->language = "de";
+        if (isset($_GET["lang"]))
+            $_SESSION["lang"] = $_GET["lang"];
+        $this->language = isset($_SESSION["lang"]) ? $_SESSION["lang"] : "en";
 
         # Page Id's
         $this->pageIds = array(
@@ -94,9 +96,10 @@ class Config
         return $this->user;
     }
 
-    public function isAdmin(){
+    public function isAdmin()
+    {
         $user = $this->getUser();
-        if(!isset($user))
+        if (!isset($user))
             return false;
         return \service\RoleService::getInstance()->findRoleById($user->roleId)->name == "admin";
     }
