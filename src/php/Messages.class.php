@@ -85,5 +85,8 @@ class Messages
         "register_errPasswordVerify" => array("Passwort bitte korrekt wiederholen", "Please repeat the password correctly"),
         "register_success" => array("Gespeichert", "Saved"),
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
+        "register_" => array("", ""),
+        "404_pageNotFound" => array("Die angeforderte Seite wurde nicht gefunden.", "The requested page ist not available.")
+
     );
 }
