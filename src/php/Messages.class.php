@@ -23,12 +23,13 @@ class Messages
      * index 1 -> en
      */
     var $messages = array(
+        'article_features' => array('Features', 'Features'),
         'accessDenied' => array('Sie haben keine Berechtigung auf diese Seite zuzugreifen', 'You are not allowed to access this page'),
         'savedSuccess' =>
         array('Erfolgreich gespeichert!', 'Saved successfully'),
         'notAllAttributesSet' =>
         array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
-        'addToChart' =>
+        'addToCart' =>
         array('In den Warenkörb', 'Add to Chart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),

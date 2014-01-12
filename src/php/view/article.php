@@ -4,16 +4,21 @@ global $tpl;
 
 $articlePageId = Config::getInstance()->getPageIdByValue('article');
 $furniture = null;
+// services
 $msgService = \service\MsgService::getInstance();
+$furnitureService = \service\FurnitureService::getInstance();
+
+//get furniture based on the param
 if (isset($_GET["pageId"]) && $_GET["pageId"] == $articlePageId && isset($_GET["f"])) {
-    $furnitureService = \service\FurnitureService::getInstance();
     $furnitureId = $_GET["f"];
     $furniture = $furnitureService->findFurnitureById($furnitureId);
 } else {
-    // TODO invalid URL
+    header("Location: ./index.php?pageId=404");
 }
 
 $tpl->assign("name", $msgService->getName($furniture));
 $tpl->assign("desc", $msgService->getDescription($furniture));
 $tpl->assign("furnitureId", isset($furniture) ? $furniture->getId() : "");
-$tpl->assign("addToChart", $msgService->getMsg('addToChart'));
+$tpl->assign("addToCart", $msgService->getMsg('addToCart'));
+$tpl->assign("features", $furnitureService->findFeaturesForFurniture($furniture));
+$tpl->assign("furniture", $furniture);
