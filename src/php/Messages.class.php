@@ -57,7 +57,8 @@ class Messages
         "furniture_feature_descDe" => array("Beschreibung DE", 'Description ger'),
         "furniture_feature_descEn" => array("Beschreibung EN", 'Description en'),
         "furniture_feature_additionalPrice" => array("Preiszuschlag", 'Additional price'),
-        "furniture_feature_btnLabel" => array("Hinzufügen", 'Add'),
+        "furniture_feature_btnLabel" => array("Speichern", 'Save'),
+        "furniture_feature_list" => array("Verfügbare Features", 'Avaliable features'),
 
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),

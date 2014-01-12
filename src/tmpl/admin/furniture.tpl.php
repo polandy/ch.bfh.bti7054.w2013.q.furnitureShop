@@ -85,52 +85,94 @@
     <?php
     if ($TPL['addFeatures']) {
         ?>
-            <div class="row">
-                <div class="large-12 columns">
-                    <h3><?= $TPL["msg"]->getMsg('furniture_feature_add') ?></h3>
-                </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <h3><?= $TPL["msg"]->getMsg('furniture_feature_list') ?></h3>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="large-4 columns">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_descDe') ?></span>
+            </div>
+            <div class="large-4 columns">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_descEn') ?></span>
+            </div>
+            <div class="large-3 columns pull-1">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_additionalPrice') ?></span>
+            </div>
+        </div>
+
+        <?php
+        $features = $TPL['features'];
+        if (isset($features) || $features != null) {
+            foreach ($features as $feature) {
+                ?>
+                <form method="POST">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <textarea required="true" name="desc_de"><?= $feature->getNameDe() ?></textarea>
+                        </div>
+                        <div class="large-4 columns">
+                            <textarea required="true" name="desc_en"><?= $feature->getNameEn() ?></textarea>
+                        </div>
+                        <div class="large-3 columns ">
+                            <input name="additionalPrice" type="number"  value="<?= $feature->getExtraPrice() ?>"/>  </div>
+                        <div class="large-1 columns">
+                            <input type="hidden" name="furnitureId" value="<?= $f->getId(); ?>">
+                            <input type="hidden" name="featureId" value="<?= $feature->getId(); ?>">
+                            <input type="hidden" name="action" value="addNewFeature">
+                            <input type="submit" name="submitNewFeature"
+                                   value="<?= $TPL['msg']->getMsg('furniture_feature_btnLabel') ?>"/>
+                        </div>
+                    </div>
+                </form>
+            <?php
+            } // end for
+        } // end if
+
+        ?>
+        <div class="row">
+            <div class="large-12 columns">
+                <h3><?= $TPL["msg"]->getMsg('furniture_feature_add') ?></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-4 columns">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_descDe') ?></span>
+            </div>
+            <div class="large-4 columns">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_descEn') ?></span>
+            </div>
+            <div class="large-3 columns pull-1">
+                <span><?= $TPL['msg']->getMsg('furniture_feature_additionalPrice') ?></span>
+            </div>
+        </div>
+
+        <form method="POST">
             <div class="row">
                 <div class="large-4 columns">
-                    <span><?= $TPL['msg']->getMsg('furniture_feature_descDe') ?></span>
+                    <textarea required="true" name="desc_de"></textarea>
                 </div>
                 <div class="large-4 columns">
-                    <span><?= $TPL['msg']->getMsg('furniture_feature_descEn') ?></span>
+                    <textarea required="true" name="desc_en"></textarea>
+
                 </div>
-                <div class="large-3 columns pull-1">
-                    <span><?= $TPL['msg']->getMsg('furniture_feature_additionalPrice') ?></span>
+                <div class="large-3 columns ">
+                    <input name="additionalPrice" type="number"/>
+                </div>
+                <div class="large-1 columns">
+                    <input type="hidden" name="furnitureId" value="<?= $f->getId(); ?>">
+                    <input type="hidden" name="action" value="addNewFeature">
+                    <input type="submit" name="submitNewFeature"
+                           value="<?= $TPL['msg']->getMsg('furniture_feature_btnLabel') ?>"/>
                 </div>
             </div>
-
-            <form method="POST">
-                <div class="row">
-                    <div class="large-4 columns">
-                        <textarea required="true" name="desc_de"></textarea>
-                    </div>
-                    <div class="large-4 columns">
-                        <textarea required="true" name="desc_en"></textarea>
-
-                    </div>
-                    <div class="large-3 columns ">
-                        <input name="additionalPrice" type="number"/>
-                    </div>
-                    <div class="large-1 columns">
-                        <input type="hidden" name="furnitureId" value="<?=$f->getId();?>">
-                        <input type="hidden" name="action" value="addNewFeature">
-                        <input type="submit" name="submitNewFeature" value="<?=$TPL['msg']->getMsg('furniture_feature_btnLabel')?>"/>
-                    </div>
-                </div>
         </form>
 
 
     <?php
     } // end if
-
-
-    //furniture_feature_add" => array("Fea
-    //furniture_feature_descDe" => array("
-    //furniture_feature_descEn" => array("
-    //furniture_feature_additionalPrice" =
     ?>
 
 
