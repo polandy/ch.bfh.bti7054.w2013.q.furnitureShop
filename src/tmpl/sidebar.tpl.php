@@ -19,6 +19,7 @@
                 $category = \service\CategoryService::getInstance()->findCategoryById($id);
             }
 
+
             $furnitures = \service\FurnitureService::getInstance()->findFurnitureByCategory($category);
             $articlePageId = Config::getInstance()->getPageIdByValue('article');
             foreach ($furnitures as $f) {
