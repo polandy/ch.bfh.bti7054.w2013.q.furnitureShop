@@ -75,9 +75,31 @@ class Config
         $this->database_host = "localhost";
         $this->database_user = "root";
         $this->database_pw = "";
+
+        $this->user = null;
+        $_SESSION["user_id"] = 1;
     }
 
-    public function getPageIdByValue($val) {
+    /**
+     * Returns the currently logged in user
+     */
+    public function getUser()
+    {
+        if (!isset($this->user) && isset($_SESSION["user_id"])) {
+            $this->user = \service\UserService::getInstance()->findUserById($_SESSION["user_id"]);
+        }
+        return $this->user;
+    }
+
+    public function isAdmin(){
+        $user = $this->getUser();
+        if(!isset($user))
+            return false;
+        return \service\RoleService::getInstance()->findRoleById($user->roleId)->name == "admin";
+    }
+
+    public function getPageIdByValue($val)
+    {
         return (array_search($val, $this->pageIds));
     }
 
