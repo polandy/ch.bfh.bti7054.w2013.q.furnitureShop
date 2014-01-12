@@ -16,8 +16,8 @@
                 </ul>
             </div>
             <div class="large-1 columns">
-                <a href='./index.php?lang=de'>de</a> /
-                <a href='./index.php?lang=en'>en</a>
+                <a href='<?=$TPL["langURL"]?>de'>de</a> /
+                <a href='<?=$TPL["langURL"]?>en'>en</a>
             </div>
         </div>
     </div>

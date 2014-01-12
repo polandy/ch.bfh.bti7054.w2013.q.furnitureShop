@@ -96,6 +96,7 @@ CREATE TABLE IF NOT EXISTS `order_furniture` (
   `orderId` int(11) NOT NULL AUTO_INCREMENT,
   `furnitureId` int(11) NOT NULL,
   `featureId` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
   KEY `FKCDB06801328C30BB` (`furnitureId`),
   KEY `FKCDB06801328C30B8` (`featureId`),
   KEY `FKCDB06801F447A673` (`orderId`)
