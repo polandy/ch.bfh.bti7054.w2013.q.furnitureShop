@@ -53,6 +53,11 @@ class Messages
         "furniture_price" => array("Preis", 'Price'),
         "furniture_descriptionDe" => array("Deutsche Beschreibung", 'German description'),
         "furniture_descriptionEn" => array("Englische Beschreibung", 'English description'),
+        "furniture_feature_add" => array("Feature hinzufügen", 'Add Feature'),
+        "furniture_feature_descDe" => array("Beschreibung DE", 'Description ger'),
+        "furniture_feature_descEn" => array("Beschreibung EN", 'Description en'),
+        "furniture_feature_additionalPrice" => array("Preiszuschlag", 'Additional price'),
+        "furniture_feature_btnLabel" => array("Hinzufügen", 'Add'),
 
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),

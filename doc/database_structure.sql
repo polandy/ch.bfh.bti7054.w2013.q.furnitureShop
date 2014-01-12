@@ -58,14 +58,14 @@ CREATE TABLE IF NOT EXISTS `furniture` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `furniturefeature`
+-- Tabellenstruktur für Tabelle `feature`
 --
 
 CREATE TABLE IF NOT EXISTS `feature` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `extraPrice` int(11) NOT NULL,
-  `value_de` varchar(256) NOT NULL,
-  `value_en` varchar(256) NOT NULL,
+  `name_de` varchar(256) NOT NULL,
+  `name_en` varchar(256) NOT NULL,
   `furnitureId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK40748AC4328C30BB` (`furnitureId`)

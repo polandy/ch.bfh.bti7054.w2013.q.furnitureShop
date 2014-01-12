@@ -92,6 +92,25 @@ class FurnitureService extends AbstractService
     }
 
     /**
+     * adds the given feature for the given furniture
+     * @param $furniture
+     * @param $feature
+     */
+    public function addFeatureForFurniture($feature)
+    {
+        $sql = "REPLACE INTO feature (id, extraPrice, name_de, name_en, furnitureId)
+                VALUES (:id, :extraPrice, :name_de, :name_en, :furnitureId)";
+        $sth = $this->getDBH()->prepare($sql);
+        $sth->execute(array(
+                'id' => $feature->getId(),
+                'extraPrice' => $feature->getExtraPrice(),
+                'name_de' => $feature->getNameDe(),
+                'name_en' => $feature->getNameEn(),
+                'furnitureId' => $feature->getFurnitureId())
+        );
+    }
+
+    /**
      * @param $furniture object you want to update with all given update parameters
      */
     public function updateFurniture($furniture) {
