@@ -56,7 +56,8 @@ if (isset($_POST["action"])) {
     } elseif(isset($_POST["furnitureId"]) && $action == 'addNewFeature') {
         // check whether all attributes are set
         if (isset($_POST['desc_de']) && isset($_POST['desc_en']) && isset($_POST['additionalPrice'])) {
-
+            $feature = new \model\Feature($_POST['additionalPrice'], $furnitureId, $_POST['desc_de'], $_POST['desc_en']);
+            $furnitureService->addFeatureForFurniture($feature);
         } else {
             // handle not all attributes are set
         }
