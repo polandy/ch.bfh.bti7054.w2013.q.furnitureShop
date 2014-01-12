@@ -12,11 +12,14 @@ if (isset($furnitureId)) {
     $furniture = $furnitureService->findFurnitureById($furnitureId);
     if ($furniture != null) {
         // Edit Furniture
+        $features = $furnitureService->findFeaturesForFurniture($furniture);
+
         $tpl->assign("title", $msgService->getMsg('furniture_edit'));
         $tpl->assign("furniture", $furniture);
         $tpl->assign("btnAction", $action_edit);
         $tpl->assign("btnLabel", $msgService->getMsg('furniture_save'));
         $tpl->assign("addFeatures", true);
+        $tpl->assign("features", $features);
     } else {
         header("Location: ./index.php?pageId=404");
     }
@@ -57,7 +60,13 @@ if (isset($_POST["action"])) {
         // check whether all attributes are set
         if (isset($_POST['desc_de']) && isset($_POST['desc_en']) && isset($_POST['additionalPrice'])) {
             $feature = new \model\Feature($_POST['additionalPrice'], $furnitureId, $_POST['desc_de'], $_POST['desc_en']);
+            if (isset($_POST['featureId'])) {
+                $feature->setId($_POST['featureId']);
+            }
             $furnitureService->addFeatureForFurniture($feature);
+            //refresh features for view
+            $features = $furnitureService->findFeaturesForFurniture($furniture);
+            $tpl->assign("features", $features);
         } else {
             // handle not all attributes are set
         }

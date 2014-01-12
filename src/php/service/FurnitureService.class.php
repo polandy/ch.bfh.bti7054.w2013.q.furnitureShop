@@ -43,7 +43,7 @@ class FurnitureService extends AbstractService
 
     /**
      *
-     * @param $category as object
+     * @param $id of the furniture
      * @return furniture with given id
      */
     public function findFurnitureById($id)
@@ -73,6 +73,19 @@ class FurnitureService extends AbstractService
     }
 
     /**
+     *
+     * @param $furniture object
+     * @return all available features for the given furniture object
+     */
+    public function findFeaturesForFurniture($furniture) {
+        $sth = $this->getDBH()->prepare("SELECT * FROM Feature WHERE furnitureId = :furnitureId;");
+        $sth->bindValue(':furnitureId', $furniture->getId());
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Feature");
+        return $list;
+    }
+
+    /**
      * Creates a Furniture in the database based on the given object
      * @param $furniture furniture object
      */
@@ -83,10 +96,10 @@ class FurnitureService extends AbstractService
         $sth = $this->getDBH()->prepare($sql);
         $sth->execute(array(
                 ':price' => $furniture->getBasicPrice(),
-                ':desc_de' => $furniture->getDescriptionDe(),
-                ':desc_en' => $furniture->getDescriptionEn(),
-                ':name_de' => $furniture->getNameDe(),
-                ':name_en' => $furniture->getNameEn(),
+                ':desc_de' => htmlentities($furniture->getDescriptionDe()),
+                ':desc_en' => htmlentities($furniture->getDescriptionEn()),
+                ':name_de' => htmlentities($furniture->getNameDe()),
+                ':name_en' => htmlentities($furniture->getNameEn()),
                 ':category' => $furniture->getCategory()->getId())
         );
     }
@@ -104,11 +117,13 @@ class FurnitureService extends AbstractService
         $sth->execute(array(
                 'id' => $feature->getId(),
                 'extraPrice' => $feature->getExtraPrice(),
-                'name_de' => $feature->getNameDe(),
-                'name_en' => $feature->getNameEn(),
+                'name_de' => htmlentities($feature->getNameDe()),
+                'name_en' => htmlentities($feature->getNameEn()),
                 'furnitureId' => $feature->getFurnitureId())
         );
     }
+
+
 
     /**
      * @param $furniture object you want to update with all given update parameters

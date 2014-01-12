@@ -23,12 +23,13 @@ class Messages
      * index 1 -> en
      */
     var $messages = array(
+        'article_features' => array('Features', 'Features'),
         'accessDenied' => array('Sie haben keine Berechtigung auf diese Seite zuzugreifen', 'You are not allowed to access this page'),
         'savedSuccess' =>
         array('Erfolgreich gespeichert!', 'Saved successfully'),
         'notAllAttributesSet' =>
         array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
-        'addToChart' =>
+        'addToCart' =>
         array('In den Warenkörb', 'Add to Chart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
@@ -57,7 +58,8 @@ class Messages
         "furniture_feature_descDe" => array("Beschreibung DE", 'Description ger'),
         "furniture_feature_descEn" => array("Beschreibung EN", 'Description en'),
         "furniture_feature_additionalPrice" => array("Preiszuschlag", 'Additional price'),
-        "furniture_feature_btnLabel" => array("Hinzufügen", 'Add'),
+        "furniture_feature_btnLabel" => array("Speichern", 'Save'),
+        "furniture_feature_list" => array("Verfügbare Features", 'Avaliable features'),
 
         "pdf_title" => array("Bestellbestätigung", 'Order confirmation'),
         "pdf_furniture" => array("Möbel", 'Furniture'),
