@@ -70,6 +70,7 @@ class Config
             100 => "admin/category",
             200 => "admin/furniture",
             403 => "accessDenied",
+            404 => "404",
             97 => "register",
             98 => "logout",
             99 => "login");

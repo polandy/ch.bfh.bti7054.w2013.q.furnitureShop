@@ -17,7 +17,7 @@ if (isset($furnitureId)) {
         $tpl->assign("btnAction", $action_edit);
         $tpl->assign("btnLabel", $msgService->getMsg('furniture_save'));
     } else {
-        $msgService->renderErrorMsg('furniture_notFound');
+        header("Location: ./index.php?pageId=404");
     }
 } else {
     // Create a new Furniture

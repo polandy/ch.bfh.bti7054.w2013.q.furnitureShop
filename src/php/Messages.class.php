@@ -68,6 +68,7 @@ class Messages
         "register_username" => array("Benutzername", "Username"),
         "register_password" => array("Passwort", "Password"),
         "register_passwordVerify" => array("Passwort bestätigen", "Password verify"),
-        "register_" => array("", "")
+        "register_" => array("", ""),
+        "404_pageNotFound" => array("Die angeforderte Seite wurde nicht gefunden.", "The requested page ist not available.")
     );
 }
