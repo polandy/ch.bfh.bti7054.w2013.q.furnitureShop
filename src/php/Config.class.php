@@ -76,6 +76,7 @@ class Config
         $this->database = "db_furnitureshop";
         $this->database_host = "localhost";
         $this->database_user = "root";
+
         $this->database_pw = "";
 
         $this->user = null;
