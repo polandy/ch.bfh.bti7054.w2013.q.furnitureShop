@@ -1,3 +1,7 @@
+<?php
+// Display a furniture with its features
+?>
+
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">
@@ -29,5 +33,4 @@
             <input type="submit" value="<?= $TPL["addToChart"] ?>" class="button"/>
         </div>
     </form>
-</div>
 </div>

@@ -42,7 +42,8 @@ $furnitureService = \service\FurnitureService::getInstance();
 
         <!-- Load Sidebar -->
         <!-- This is source ordered to be pulled to the left on larger screens -->
-        <?php $tpl->display("sidebar"); ?>
+        <?php include ($config->viewDir . "sidebar.php");
+        $tpl->display("sidebar"); ?>
 
     </div>
 

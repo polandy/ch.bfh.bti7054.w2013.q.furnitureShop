@@ -60,6 +60,20 @@ class FurnitureService extends AbstractService
 
     /**
      *
+     * @param $text as search text
+     * @return furnitures that match
+     */
+    public function search($text)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM Furniture WHERE description_de LIKE :text OR description_en LIKE :text OR name_de LIKE :text OR name_en LIKE :text;");
+        $sth->bindValue(':text', "%$text%");
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Furniture");
+        return $list;
+    }
+
+    /**
+     *
      * @param $furniture object
      * @return all available features for the given furniture object
      */
