@@ -43,6 +43,23 @@ class FurnitureService extends AbstractService
 
     /**
      *
+     * @param $id of the feature
+     * @return feature with given id
+     */
+    public function findFeatureById($id)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM Feature WHERE id = :id;");
+        $sth->bindParam(':id', $id);
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Feature");
+        if (sizeof($list) > 0) {
+            return $list[0];
+        }
+        return null;
+    }
+
+    /**
+     *
      * @param $id of the furniture
      * @return furniture with given id
      */

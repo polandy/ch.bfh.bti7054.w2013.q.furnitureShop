@@ -56,6 +56,7 @@
                     echo '  </div>';
                     echo '  <div class="columns large-5 pull-2">';
                     echo "      <input type='hidden' name='featureId' value='" . $feature->getId() . "' /> ";
+                    echo "      <input type='hidden' name='action' value='addToCart' /> ";
                     echo "      <input type='submit' value='" . $TPL["addToCart"] . "' class='button small' /> ";
                     echo '  </div>';
                     echo '</div>';
