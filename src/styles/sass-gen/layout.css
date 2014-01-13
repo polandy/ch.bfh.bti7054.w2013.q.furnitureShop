@@ -49,3 +49,8 @@ footer .top-bar .top-bar-section ul {
 #searchresults ul {
   list-style-type: none;
 }
+
+/* line 53, ../sass/layout.scss */
+#footerText {
+  font-size: 0.7em;
+}
