@@ -20,7 +20,7 @@ $furnitureService = \service\FurnitureService::getInstance();
 <body>
 <div class="wrapper">
     <?php
-    include ($config->viewDir . "navi.php");
+    include ($config->controllerDir . "navi.php");
     $tpl->display("navi");
     ?>
     <div class="row">
@@ -29,20 +29,20 @@ $furnitureService = \service\FurnitureService::getInstance();
             $pageId = isset($_GET["pageId"]) ? $_GET["pageId"] : null;
             if (isset($pageId)) {
                 $pageName = $config->pageIds[$pageId];
-                if (!isset($pageName) || !is_file($config->viewDir . $pageName . ".php")) {
+                if (!isset($pageName) || !is_file($config->controllerDir . $pageName . ".php")) {
                     $tpl->display("error");
                 } else {
-                    if (include ($config->viewDir . $pageName) . ".php") $tpl->display($pageName); # Only show the template when the inclusion was ok (access...)
+                    if (include ($config->controllerDir . $pageName) . ".php") $tpl->display($pageName); # Only show the template when the inclusion was ok (access...)
                 }
             } else {
-                if (include ($config->viewDir . "home") . ".php") $tpl->display("home"); # Only show the template when the inclusion was ok (access...)
+                if (include ($config->controllerDir . "home") . ".php") $tpl->display("home"); # Only show the template when the inclusion was ok (access...)
             }
             ?>
         </div>
 
         <!-- Load Sidebar -->
         <!-- This is source ordered to be pulled to the left on larger screens -->
-        <?php include ($config->viewDir . "sidebar.php");
+        <?php include ($config->controllerDir . "sidebar.php");
         $tpl->display("sidebar"); ?>
 
     </div>
@@ -52,7 +52,7 @@ $furnitureService = \service\FurnitureService::getInstance();
 
 
 <?php
-include ($config->viewDir . "footer.php");
+include ($config->controllerDir . "footer.php");
 $tpl->display("footer");
 ?>
 </div>

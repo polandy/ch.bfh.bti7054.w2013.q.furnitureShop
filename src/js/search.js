@@ -3,7 +3,7 @@
  * @param text Search text
  */
 function search(text) {
-	$.post("php/view/search.php", {text: text}, function (results) {
+	$.post("php/controller/search.php", {text: text}, function (results) {
 		$("#searchresults").show();
 		$("#searchresults").html(results);
 	});

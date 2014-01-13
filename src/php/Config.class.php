@@ -9,14 +9,15 @@ class Config
 
     # image directory. All Images are stored in this dir.
     public $webImgDir;
-    # PHP directory. Usually all PHP Files are stored in this or a sub directory.
+    # PHP directory as it is accessible from the web. Usually all PHP Files are stored in this or a sub directory.
     public $webPhpDir;
+    # PHP directory as it is accessible from the filesystem
     public $phpDir;
-    public $viewDir;
+    # Controller directory as it is accessible from the filesystem
+    public $controllerDir;
 
+    # Template directory as it is accessible from the filesystem
     public $tplDir;
-    public $funcDir;
-    public $polDir;
 
     # The name of the database
     public $database;
@@ -59,7 +60,7 @@ class Config
         # The php directory
         $this->phpDir = realpath("./php") . "/";
 
-        $this->viewDir = realpath("./php/view") . "/";
+        $this->controllerDir = realpath("./php/controller") . "/";
 
         # The name of the database
         $this->database = "db_furnitureShop";
