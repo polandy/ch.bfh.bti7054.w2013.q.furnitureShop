@@ -46,7 +46,7 @@ INSERT INTO `feature` (`id`, `extraPrice`, `name_de`, `name_en`, `furnitureId`) 
 (10, 50, '200x200cm', '200x200cm', 15),
 (11, 50, 'Standard: 180x200cm', 'Standard: 180x200cm', 16),
 (12, 313, 'Material: Eisen', 'Material: Iron', 17),
-(13, 1, 'Standard: 35cm Durchmesser', 'Standard: 35cm Caliber', 18);
+(13, 1, '35cm Durchmesser', '35cm Caliber', 18);
 
 INSERT INTO paymentmethod (name_de, name_en) VALUES
 ('Bar bei Abholung', 'Cash on pick-up'),
