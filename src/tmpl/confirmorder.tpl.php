@@ -41,7 +41,7 @@
                     <p><?= $TPL["msg"]->getName("conf_totalPrice") ?></p>
                 </div>
                 <div class="large-6 columns pull-3">
-                    <p><strong><?= number_format($TPL["totalPrice"], 2, "'", ".") ?> CHF</strong></p>
+                    <p><strong><?= number_format($TPL["totalPrice"], 2, ".", "'") ?> CHF</strong></p>
                 </div>
             </div>
             <div class="large-6 right">

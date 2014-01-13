@@ -9,8 +9,6 @@ class Config
 
     # image directory. All Images are stored in this dir.
     public $webImgDir;
-    # PHP directory as it is accessible from the web. Usually all PHP Files are stored in this or a sub directory.
-    public $webPhpDir;
     # PHP directory as it is accessible from the filesystem
     public $phpDir;
     # Controller directory as it is accessible from the filesystem
@@ -51,45 +49,44 @@ class Config
         # The web-img directory
         $this->webImgDir = "images/";
 
-        # The web-php directory
-        $this->webPhpDir = "php/";
-
         # The php template directory
         $this->tplDir = realpath("./tmpl") . "/";
 
-        # The php directory
-        $this->phpDir = realpath("./php") . "/";
-
         $this->controllerDir = realpath("./php/controller") . "/";
 
-        # The name of the database
-        $this->database = "db_furnitureShop";
-
-        # The database user
-        $this->database_user = "db_furnitureShop";
-
-        # The database password
-        $this->database_pw = "db_furnitureShop";
-
-        # sender email
+        # sender email (username for SMTP login)
         $this->email = "mobius.furniturus@gmail.com";
 
-        # sender email password
+        # sender email password (password for SMTP login)
         $this->email_pw = 'Furnitinitystreet#8';
 
-        # SMTP host
+        # SMTP host to send emails
         $this->smtp = 'smtp.gmail.com';
 
-        # SMTP port
+        # SMTP port to send emails
         $this->smtp_port = 465;
 
         # Title der Webseite
         $this->title = htmlentities("Möbius Furniturus - Online Shop");
 
+        # DB Name
+        $this->database = "db_furnitureshop";
+
+        # DB Host
+        $this->database_host = "localhost";
+
+        # DB User
+        $this->database_user = "root";
+
+        # DB password
+        $this->database_pw = "";
+
+
         # Sprache
         if (isset($_GET["lang"]))
             $_SESSION["lang"] = $_GET["lang"];
         $this->language = isset($_SESSION["lang"]) ? $_SESSION["lang"] : "en";
+
 
         # Page Id's
         $this->pageIds = array(
@@ -108,10 +105,6 @@ class Config
             403 => "403",
             404 => "404");
 
-        $this->database = "db_furnitureshop";
-        $this->database_host = "localhost";
-        $this->database_user = "root";
-        $this->database_pw = "";
 
         $this->user = null;
     }

@@ -95,7 +95,7 @@ class PDFOrderService extends \FPDF
             $this->Cell(40, 6, utf8_decode($msgSrv->getName($furnitue)), 1);
             $this->Cell(40, 6, utf8_decode($msgSrv->getName($feature)), 1);
             $this->Cell(40, 6, $orderFurniture->quantity, 1);
-            $this->Cell(40, 6, utf8_decode(number_format($price, 2, "'", "."))." CHF", 1);
+            $this->Cell(40, 6, utf8_decode(number_format($price, 2, ".", "'"))." CHF", 1);
             $this->Ln();
         }
     }
@@ -112,7 +112,7 @@ class PDFOrderService extends \FPDF
         $this->Ln(15);
         $this->Cell(80);
         $this->Cell(40, 7, $msgSrv->getName("pdf_totalPrice"));
-        $this->Cell(40, 7, utf8_decode(number_format($totalPrice, 2, "'", ".")) . " CHF");
+        $this->Cell(40, 7, utf8_decode(number_format($totalPrice, 2, ".", "'")) . " CHF");
     }
 
     /**

@@ -37,6 +37,7 @@ class TemplateEngine
         # Kurze Referenz auf die Template-Variable
         $TPL = &$this->TEMPLATE_VARS;
 
+        # Message Server der View zur Verfügung stellen.
         $TPL["msg"] = \service\MsgService::getInstance();
 
         # Variabeln entpacken, damit $this weggelassen werden kann
