@@ -38,7 +38,8 @@ class Messages
         'notAllAttributesSet' =>
         array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
         'addToCart' =>
-        array('In den Warenkorb', 'Add to Chart'),
+        array('In den Warenkorb', 'Add to Cart'),
+        'cart' => array('Warenkorb', 'Cart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
         'edit' =>
@@ -79,6 +80,11 @@ class Messages
         "pdf_totalPrice" => array("Total", "Total"),
         "pdf_" => array("", ""),
 
+        "email_subject" => array("Bestellbestätigung", "Order confirmation"),
+        "email_dear" => array("Guten Tag", "Dear"),
+        "email_text" => array("Ihre Bestellung wurde entgegenommen. Eine Bestellüberischt finden Sie im Anhang.<br><br>Besten Dank", "Your order is confirmed. Please find the order overview in the attachment.<br><br>Best regards"),
+        "email_" => array("", ""),
+
         "cart_title" => array("Warenkorb", "Shopping cart"),
         "cart_furniture" => array("Möbel", "Furniture"),
         "cart_feature" => array("Extra", "Feature"),
@@ -88,6 +94,8 @@ class Messages
         "cart_remove" => array("Entfernen", "Remove"),
         "cart_update" => array("Speichern", "Update"),
         "cart_order" => array("Bestellen", "Order"),
+        "cart_empty" => array("Bitte etwas in den Warenkorb hinzufügen", "Please add something to your cart"),
+        "cart_clear" => array("Leeren", "Clear"),
         "cart_" => array("", ""),
 
         "conf_title" => array("Bestellung bestätigen", "Confirm order"),
@@ -95,6 +103,7 @@ class Messages
         "conf_payment" => array("Bezahlart", "Payment method"),
         "conf_address" => array("Ihre Adresse", "Your address"),
         "conf_totalPrice" => array("Totaler Preis", "Total price"),
+        "conf_cancel" => array("Abbrechen", "Cancel"),
         "conf_finalCancel" => array("Wirklich jetzt bestellen?", "Really order now?"),
         "conf_" => array("", ""),
 

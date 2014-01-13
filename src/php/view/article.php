@@ -30,6 +30,8 @@ if ($action == 'addToCart') {
     $furniture = $furnitureService->findFurnitureById($furniture);
 
     $orderService->addToOrder($furniture, $feature);
+
+    header("Location: ./index.php?pageId=5");
 }
 
 $tpl->assign("name", $msgService->getName($furniture));

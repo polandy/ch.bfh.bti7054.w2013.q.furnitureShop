@@ -76,6 +76,11 @@ class Config
         # sender email password
         $this->email_pw = 'Furnitinitystreet#8';
 
+        # SMTP host
+        $this->smtp = 'smtp.gmail.com';
+
+        # SMTP port
+        $this->smtp_port = 465;
 
         # Title der Webseite
         $this->title = htmlentities("Möbius Furniturus - Online Shop");

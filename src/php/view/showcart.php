@@ -16,6 +16,7 @@ $order = $orderService->findOrCreateOpenedOrder($user);
 if (isset($_POST["updateCart"])) {
     $orderFurnitures = $orderService->findAllOrderFurnitures($order);
     foreach ($orderFurnitures as $orderFurniture) {
+        // Update the quantity
         if (isset($_POST["quantity_" . $orderFurniture->id])) {
             $newQuantity = $_POST["quantity_" . $orderFurniture->id];
             if ($newQuantity > 0)
@@ -23,16 +24,22 @@ if (isset($_POST["updateCart"])) {
             if ($newQuantity <= 0)
                 $orderService->removeFurnitureQuantity($orderFurniture);
         }
+        // Remove a OrderFurniture
         if (isset($_POST["remove_" . $orderFurniture->id]))
             $orderService->removeFurnitureQuantity($orderFurniture);
     }
+// Emtpy the cart
+}elseif(isset($_POST["clearCart"])){
+    $orderService->clearOrder($order);
 }
 
-
+// Set view variables
 $order = $orderService->findOrCreateOpenedOrder($user);
 $tpl->assign("user", $user);
 $tpl->assign("order", $order);
 $tpl->assign("totalPrice", $orderService->getTotalOrderPrice($order));
 $tpl->assign("furnitureService", $furnitureService);
-$tpl->assign("orderFurnitures", $orderService->findAllOrderFurnitures($order));
+$orderFurnitures = $orderService->findAllOrderFurnitures($order);
+$tpl->assign("orderFurnitures", $orderFurnitures);
+$tpl->assign("isEmpty", sizeof($orderFurnitures)<=0);
 

@@ -42,6 +42,8 @@
                 </div>
             </div>
             <div class="large-6 right">
+                <a href="./index.php?pageId=5" class="button"><?= $TPL["msg"]->getName("conf_cancel") ?></a>
+
                 <input type="submit" name="orderNow" data-text="<?=$TPL["msg"]->getName("conf_finalCancel")?>" value="<?= $TPL["msg"]->getName("conf_orderNow") ?>"
                        class="button" id="orderNow"/>
             </div>
