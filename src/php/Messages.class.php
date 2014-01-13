@@ -60,6 +60,7 @@ class Messages
         "furniture_feature_additionalPrice" => array("Preiszuschlag", 'Additional price'),
         "furniture_feature_btnLabel" => array("Speichern", 'Save'),
         "furniture_feature_list" => array("Verfügbare Features", 'Avaliable features'),
+        "furniture_imgUrl" => array("Bild URL", 'Img URL'),
 
         "pdf_title" => array("Bestellbestätigung", 'Order confirmation'),
         "pdf_furniture" => array("Möbel", 'Furniture'),

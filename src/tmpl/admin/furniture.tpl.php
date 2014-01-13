@@ -24,6 +24,16 @@
                     </select>
                 </div>
             </div>
+            <!-- img url -->
+            <div class="row">
+                <div class="large-4 columns">
+                    <p><?= $TPL['msg']->getMsg('furniture_imgUrl') ?></p>
+                </div>
+                <div class="large-6 columns pull-2">
+                    <input type="url" name="img_url"  required="true" pattern="\w{3,}*"
+                           value="<?= $f->getImgUrl(); ?>"/>
+                </div>
+            </div>
             <!-- Name DE -->
             <div class="row">
                 <div class="large-4 columns">
@@ -60,7 +70,7 @@
                 <div class="large-4 columns">
                     <p><?= $TPL['msg']->getMsg('furniture_descriptionDe') ?></p>
                 </div>
-                <div class="large-6 columns pull-2">
+                <div class="large-8 columns">
                     <textarea required="true" name="desc_de"><?= $f->getDescriptionDe(); ?></textarea>
                 </div>
             </div>
@@ -70,7 +80,7 @@
                 <div class="large-4 columns">
                     <p><?= $TPL['msg']->getMsg('furniture_descriptionEn') ?></p>
                 </div>
-                <div class="large-6 columns pull-2">
+                <div class="large-8 columns">
                     <textarea required="true" name="desc_en"><?= $f->getDescriptionEn(); ?></textarea>
                 </div>
             </div>
@@ -153,10 +163,10 @@
         <form method="POST">
             <div class="row">
                 <div class="large-4 columns">
-                    <textarea required="true" name="desc_de"></textarea>
+                    <textarea rows="30" cols="30" required="true" name="desc_de"></textarea>
                 </div>
                 <div class="large-4 columns">
-                    <textarea required="true" name="desc_en"></textarea>
+                    <textarea rows="30" cols="30" required="true" name="desc_en"></textarea>
 
                 </div>
                 <div class="large-3 columns ">

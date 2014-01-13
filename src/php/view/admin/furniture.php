@@ -45,12 +45,16 @@ if (isset($_POST["action"])) {
         }
         // All Attributes must be set for edit and create a new furniture!
         if (allAttributesAreSet()) {
-            $furniture = new \model\Furniture(htmlentities($_POST["name_de"]), htmlentities($_POST["name_en"]), $_POST["price"], $category, htmlentities($_POST["desc_de"]), htmlentities($_POST["desc_en"]));
+            $furniture = new \model\Furniture(htmlentities($_POST["name_de"]), htmlentities($_POST["name_en"]), $_POST["price"], $category, htmlentities($_POST["desc_de"]), htmlentities($_POST["desc_en"]), $_POST['img_url']);
             if ($action == $action_add) {
                 $furnitureService->addFurniture($furniture);
             } elseif ($action == $action_edit) {
                 $furniture->setId($furnitureId);
                 $furnitureService->updateFurniture($furniture);
+                // update furniture for view
+                $furniture = $furnitureService->findFurnitureById($furnitureId);
+                $tpl->assign("furniture", $furniture);
+
             }
         } else {
             \service\MsgService::getInstance()->renderErrorMsg('notAllAttributesSet');
@@ -76,5 +80,5 @@ if (isset($_POST["action"])) {
 function allAttributesAreSet()
 {
     return isset($_POST["name_de"]) && isset($_POST["name_en"]) && isset($_POST["price"]) &&
-    isset($_POST["desc_de"]) && isset($_POST["desc_en"]);
+    isset($_POST["desc_de"]) && isset($_POST["desc_en"]) && isset($_POST["img_url"]);
 }

@@ -108,8 +108,8 @@ class FurnitureService extends AbstractService
      */
     public function addFurniture($furniture)
     {
-        $sql = "INSERT INTO furniture (basicPrice, description_de, description_en, name_de, name_en, categoryId)
-                VALUES (:price, :desc_de, :desc_en, :name_de, :name_en, :category)";
+        $sql = "INSERT INTO furniture (basicPrice, description_de, description_en, name_de, name_en, img_url, categoryId)
+                VALUES (:price, :desc_de, :desc_en, :name_de, :name_en, :img_url, :category)";
         $sth = $this->getDBH()->prepare($sql);
         $sth->execute(array(
                 ':price' => $furniture->getBasicPrice(),
@@ -117,6 +117,7 @@ class FurnitureService extends AbstractService
                 ':desc_en' => htmlentities($furniture->getDescriptionEn()),
                 ':name_de' => htmlentities($furniture->getNameDe()),
                 ':name_en' => htmlentities($furniture->getNameEn()),
+                ':img_url' => $furniture->getImgUrl(),
                 ':category' => $furniture->getCategory()->getId())
         );
     }
@@ -147,16 +148,17 @@ class FurnitureService extends AbstractService
      */
     public function updateFurniture($furniture) {
         if (isset($furniture) && isset($furniture->id)) {
-            $sql = "UPDATE Furniture SET basicPrice = :price, description_de = :desc_de, description_en = :desc_en, name_de = :name_de, name_en = :name_en, categoryId = :category WHERE id = :id";
+            $sql = "UPDATE Furniture SET basicPrice = :price, description_de = :desc_de, description_en = :desc_en, name_de = :name_de, name_en = :name_en, img_url = :img_url, categoryId = :category WHERE id = :id";
             $sth = $this->getDBH()->prepare($sql);
             $sth->execute(array(
-                    ':price' => $furniture->getBasicPrice(),
-                    ':desc_de' => $furniture->getDescriptionDe(),
-                    ':desc_en' => $furniture->getDescriptionEn(),
-                    ':name_de' => $furniture->getNameDe(),
-                    ':name_en' => $furniture->getNameEn(),
-                    ':category' => $furniture->getCategory()->getId(),
-                    ':id' => $furniture->getId()
+                    'price' => $furniture->getBasicPrice(),
+                    'desc_de' => $furniture->getDescriptionDe(),
+                    'desc_en' => $furniture->getDescriptionEn(),
+                    'name_de' => $furniture->getNameDe(),
+                    'name_en' => $furniture->getNameEn(),
+                    'img_url' => $furniture->getImgUrl(),
+                    'category' => $furniture->getCategory()->getId(),
+                    'id' => $furniture->getId()
             ));
         }
         else {
