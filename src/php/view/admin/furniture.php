@@ -1,13 +1,22 @@
 <?php
+/**
+ * Controller for furniture admin
+ */
 
+// actions
 $action_add = "addFurniture";
 $action_edit = 'editFurniture';
+$action_addFeature = "addNewFeature";
 
+
+// get furnitureId if available
 $furnitureId = isset($_GET["f"]) ? $_GET["f"] : null;
 
+// services
 $msgService = \service\MsgService::getInstance();
 $furnitureService = \service\FurnitureService::getInstance();
 
+// if there is a furnitureId set -> edit Furniture if it exists, otherwise handle the creation of a new funiture
 if (isset($furnitureId)) {
     $furniture = $furnitureService->findFurnitureById($furnitureId);
     if ($furniture != null) {
@@ -41,7 +50,7 @@ if (isset($_POST["action"])) {
         $catService = \service\CategoryService::getInstance();
         $category = $catService->findCategoryById($categoryId);
         if ($category == null) {
-            //TODO handle
+            header("Location: ./index.php?pageId=404");
         }
         // All Attributes must be set for edit and create a new furniture!
         if (allAttributesAreSet()) {
@@ -60,7 +69,9 @@ if (isset($_POST["action"])) {
             \service\MsgService::getInstance()->renderErrorMsg('notAllAttributesSet');
         }
         \service\MsgService::getInstance()->renderSuccessMsg('savedSuccess');
-    } elseif(isset($_POST["furnitureId"]) && $action == 'addNewFeature') {
+
+    // handle add new Feature
+    } elseif(isset($_POST["furnitureId"]) && $action == $action_addFeature) {
         // check whether all attributes are set
         if (isset($_POST['desc_de']) && isset($_POST['desc_en']) && isset($_POST['additionalPrice'])) {
             $feature = new \model\Feature($_POST['additionalPrice'], $furnitureId, $_POST['desc_de'], $_POST['desc_en']);
@@ -72,7 +83,7 @@ if (isset($_POST["action"])) {
             $features = $furnitureService->findFeaturesForFurniture($furniture);
             $tpl->assign("features", $features);
         } else {
-            // handle not all attributes are set
+            \service\MsgService::getInstance()->renderErrorMsg('notAllAttributesSet');
         }
     }
 }
