@@ -70,6 +70,8 @@ class Config
             2 => "category",
             3 => "article",
             4 => 'impressum',
+            5 => "showcart",
+            6 => "confirmorder",
             100 => "admin/category",
             200 => "admin/furniture",
             403 => "accessDenied",

@@ -21,7 +21,8 @@ class MsgService extends AbstractService
     /**
      * @return instance of the MsgService
      */
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (is_null(static::$instance) || !static::$instance instanceof MsgService) {
             static::$instance = new static();
         }
@@ -32,7 +33,8 @@ class MsgService extends AbstractService
      * @param $model or key
      * @return label in appropriate language, if no label has been found, key is returned
      */
-    public function getName($model) {
+    public function getName($model)
+    {
         $lang = \Config::getInstance()->language;
         if ($model instanceof GenericNamedModel) {
             if ($lang == 'en') {
@@ -41,6 +43,8 @@ class MsgService extends AbstractService
             if ($lang == 'de') {
                 return $model->getNameDe();
             }
+        } elseif ($model == null) {
+            return "-";
         } else {
             $messages = \Messages::getInstance()->getMessages();
             if (!empty($messages)) {
@@ -54,7 +58,8 @@ class MsgService extends AbstractService
      * @param $furniture
      * @return description in appropriate language
      */
-    public function getDescription($furniture) {
+    public function getDescription($furniture)
+    {
         $lang = \Config::getInstance()->language;
         if ($furniture instanceof Furniture) {
             if ($lang == 'en') {
@@ -69,7 +74,8 @@ class MsgService extends AbstractService
     /**
      * delegates to getName
      */
-    public function getMsg($key) {
+    public function getMsg($key)
+    {
         return $this->getName($key);
     }
 
@@ -77,7 +83,8 @@ class MsgService extends AbstractService
      * @param $key of the message
      * @return string styled
      */
-    public function getErrorMsg($key) {
+    public function getErrorMsg($key)
+    {
         return '<span class="alert-box alert">' . $key . '</span>';
     }
 
@@ -85,7 +92,8 @@ class MsgService extends AbstractService
      * renders a errorMessage
      * @param $key of the message
      */
-    public function renderErrorMsg($key) {
+    public function renderErrorMsg($key)
+    {
         echo $this->getErrorMsg($key);
     }
 
@@ -93,11 +101,13 @@ class MsgService extends AbstractService
      * @param $key of the message
      * @return string styled
      */
-    public function getSuccessMsg($key) {
+    public function getSuccessMsg($key)
+    {
         return '<span class="success label">' . $this->getName($key) . '</span>';
     }
 
-    public function renderMsg($key) {
+    public function renderMsg($key)
+    {
         echo $this->getName($key);
     }
 
@@ -105,7 +115,8 @@ class MsgService extends AbstractService
      * renders a successMessage
      * @param $key of the message
      */
-    public function renderSuccessMsg($key) {
+    public function renderSuccessMsg($key)
+    {
         echo $this->getSuccessMsg($key);
     }
 

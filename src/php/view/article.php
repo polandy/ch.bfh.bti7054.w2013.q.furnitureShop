@@ -18,13 +18,13 @@ if (isset($_GET["pageId"]) && $_GET["pageId"] == $articlePageId && isset($_GET["
 }
 
 // handle add to Cart action
-$action = isset($action) ? $_POST['action'] : null;
+$action = isset($_POST['action']) ? $_POST['action'] : null;
 if ($action == 'addToCart') {
     if (!isset(Config::getInstance()->user)) {
         header("Location: ./index.php?pageId=99");
     }
     $feature = isset($_POST['featureId']) ? $_POST['featureId'] : null;
-    $furniture = isset($_POST['furnitureId']) ? $_POST['furnitureId'] : null;
+    $furniture = isset($_POST['f']) ? $_POST['f'] : null;
 
     $feature = $furnitureService->findFeatureById($feature);
     $furniture = $furnitureService->findFurnitureById($furniture);

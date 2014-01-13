@@ -70,6 +70,20 @@ class Messages
         "pdf_totalPrice" => array("Total", "Total"),
         "pdf_" => array("", ""),
 
+        "cart_title" => array("Warenkorb", "Shopping cart"),
+        "cart_furniture" => array("Möbel", "Furniture"),
+        "cart_feature" => array("Extra", "Feature"),
+        "cart_quantity" => array("Anzahl", "Quantity"),
+        "cart_singlePrice" => array("Preis für 1 Stück", "Price for one"),
+        "cart_price" => array("Preis", "Price"),
+        "cart_remove" => array("Entfernen", "Remove"),
+        "cart_update" => array("Speichern", "Update"),
+        "cart_order" => array("Bestellen", "Order"),
+        "cart_" => array("", ""),
+
+        "conf_title" => array("Bestellung bestätigen", "Confirm order"),
+        "conf_orderNow" => array("Jetzt bestellen", "Order now"),
+
         "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
         "footer_admin_createCategory" => array("Kategorie erstellen", "Create Category"),

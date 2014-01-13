@@ -36,3 +36,7 @@ INSERT INTO `furniture` (`id`, `basicPrice`, `description_de`, `description_en`,
 
 INSERT INTO `feature` (`id`, `extraPrice`, `name_de`, `name_en`, `furnitureId`) VALUES
 (1, 1500, 'Birkenholz', 'Birch', 13);
+
+INSERT INTO paymentmethod (name_de, name_en) VALUES
+('Bar bei Abholung', 'Cash on pick-up'),
+('Rechnung', 'Bill');
