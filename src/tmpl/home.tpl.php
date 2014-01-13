@@ -12,6 +12,7 @@
             <small> to M&ouml;bius furniturus</small>
         </h2>
 
+        <img src="<?=Config::getInstance()->webImgDir . 'index.jpg'?>" />
         <?=\service\MsgService::getInstance()->getMsg("homepage")?>
 
     </div>
