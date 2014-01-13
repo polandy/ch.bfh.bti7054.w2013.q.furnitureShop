@@ -154,7 +154,7 @@ class Messages
 
         "register_" => array("", ""),
 
-        "search_noResult" => array("Keine Suchergebnisse...", "Nothing found..."),
+        "search_noSearchResult" => array("Keine Suchergebnisse...", "Nothing found..."),
 
         "404_pageNotFound" => array("Die angeforderte Seite wurde nicht gefunden.", "The requested page ist not available.")
 
