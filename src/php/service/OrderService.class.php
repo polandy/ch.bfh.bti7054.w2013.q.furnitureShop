@@ -175,8 +175,9 @@ class OrderService extends AbstractService
         return $row["totalPrice"];
     }
 
-    /**
-     * @param $order
+    /** Confirm the order and send a confirmation email
+     * @param $order the Order
+     * @param $paymentMethod the selected payment method
      */
     public function confirmOrder($order, $paymentMethod){
         $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 0, paymentmethod_id = :paymentmethod_id WHERE id = :id");
@@ -185,6 +186,15 @@ class OrderService extends AbstractService
         $sth->execute();
         $order = $this->findOrderById($order->id);
 
+    }
+
+    /** Remove an order
+     * @param $order
+     */
+    public function clearOrder($order){
+        $sth = $this->getDBH()->prepare("DELETE FROM `order` WHERE id = :id");
+        $sth->bindValue('id', $order->id);
+        $sth->execute();
     }
 
     /**

@@ -30,7 +30,8 @@ class Messages
         'notAllAttributesSet' =>
         array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
         'addToCart' =>
-        array('In den Warenkörb', 'Add to Chart'),
+        array('In den Warenkorb', 'Add to Cart'),
+        'cart' => array('Warenkorb', 'Cart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
         'edit' =>
@@ -80,6 +81,8 @@ class Messages
         "cart_remove" => array("Entfernen", "Remove"),
         "cart_update" => array("Speichern", "Update"),
         "cart_order" => array("Bestellen", "Order"),
+        "cart_empty" => array("Bitte etwas in den Warenkorb hinzufügen", "Please add something to your cart"),
+        "cart_clear" => array("Leeren", "Clear"),
         "cart_" => array("", ""),
 
         "conf_title" => array("Bestellung bestätigen", "Confirm order"),
@@ -87,8 +90,8 @@ class Messages
         "conf_payment" => array("Bezahlart", "Payment method"),
         "conf_address" => array("Ihre Adresse", "Your address"),
         "conf_totalPrice" => array("Totaler Preis", "Total price"),
+        "conf_cancel" => array("Abbrechen", "Cancel"),
         "conf_finalCancel" => array("Wirklich jetzt bestellen?", "Really order now?"),
-        "conf_" => array("", ""),
 
         "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),

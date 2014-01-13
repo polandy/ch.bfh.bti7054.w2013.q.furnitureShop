@@ -11,6 +11,10 @@ $orderService = \service\OrderService::getInstance();
 $paymentMethodService = \service\PaymentMethodService::getInstance();
 $order = $orderService->findOrCreateOpenedOrder($user);
 
+if(sizeof($orderService->findAllOrderFurnitures($order))<=0)
+    header("Location: index.php?pageId=5");
+
+
 
 // Order has been confirmed
 if (isset($_POST["orderNow"])) {

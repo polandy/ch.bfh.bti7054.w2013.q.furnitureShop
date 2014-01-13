@@ -46,10 +46,21 @@
                     <th><?= number_format($TPL["totalPrice"], 2, ".", "'") ?> CHF</th>
                     </tfoot>
                 </table>
-                <div class="large-6 right">
+                <?php if($TPL["isEmpty"]) { ?>
+                <div class="row ">
+                    <span class="large-6 alert-box alert right pull-3"><?=$TPL["msg"]->getName("cart_empty")?></span>
+                </div>
+                <? } ?>
+                <div class="large-3 right pull-3">
+                    <a href="./index.php?pageId=6" class="button right"><?= $TPL["msg"]->getName("cart_order") ?></a>
+                </div>
+                <div class="large-3 right pull-3">
                     <input type="submit" name="updateCart" value="<?= $TPL["msg"]->getName("cart_update") ?>"
-                           class="button"/>
-                    <a href="./index.php?pageId=6" class="button"><?= $TPL["msg"]->getName("cart_order") ?></a>
+                           class="button right"/>
+                </div>
+                <div class="large-3 right pull-3">
+                    <input type="submit" name="clearCart" value="<?= $TPL["msg"]->getName("cart_clear") ?>"
+                           class="button right"/>
                 </div>
         </form>
     </div>

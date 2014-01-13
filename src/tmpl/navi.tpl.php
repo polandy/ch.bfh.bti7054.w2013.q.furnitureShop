@@ -5,7 +5,7 @@
     <div class="large-3 columns">
         <a href='./index.php'><h1><img src="./images/logo.gif"/>furniturus</h1></a>
     </div>
-    <div class="large-3 columns">
+    <div class="large-4 columns">
         <ul>
             <?php if ($TPL["loggedin"]) { ?>
                 <?= $TPL["msg"]->getName("navi_loggedinAs") ?><a href="?pageId=97"><?= $TPL["name"] ?></a> -
@@ -16,7 +16,7 @@
             <?php } ?>
         </ul>
     </div>
-    <div class="large-6 columns">
+    <div class="large-5 columns">
         <div class="row">
             <div class="columns large-12">
                 <ul class="inline-list right">
@@ -29,8 +29,12 @@
             </div>
         </div>
         <div class="row right">
-            <div class="columns large-12">
+            <div class="columns large-3">
+                <a href="./index.php?pageId=5" class="button small"><?= $TPL["msg"]->getName("cart") ?></a>
+            </div>
+            <div class="columns large-8">
                 <input type="text" id="searchbox" placeholder="Search..."/>
+
                 <div id="searchresults">
                 </div>
             </div>
