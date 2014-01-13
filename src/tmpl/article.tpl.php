@@ -1,5 +1,6 @@
 <?php
 // Display a furniture with its features
+$furniture = $TPL["furniture"];
 ?>
 
 <div class="row">
@@ -22,7 +23,7 @@
 
     <div class="row">
         <div class="large-5 columns">
-            <img alt="<?=$TPL['msg']->getMsg($furniture)?>" src="<?=$furniture->getImgUrl()?>">
+            <img alt="<?=$TPL['msg']->getName($furniture)?>" src="<?=$furniture->getImgUrl()?>">
         </div>
         <div class="columns large-7">
             <div class="row">
@@ -70,5 +71,7 @@
                 </div>
             <?php } ?>
         </div>
+
+    </div>
     </form>
 </div>
