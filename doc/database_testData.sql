@@ -9,7 +9,7 @@ INSERT INTO user (id, birthday, email, lastLogin, firstName, lastName, male, new
 INSERT INTO `category` (`id`, `name_de`, `name_en`) VALUES
 (1, 'Betten', 'Bed'),
 (2, 'Leuchten', 'Luminaire'),
-(3, 'Sitz&ouml;bel', 'Seating furniture'),
+(3, 'Sitzm&ouml;bel', 'Seating furniture'),
 (4, 'Schlafen', 'Sleep'),
 (5, 'Tische', 'Tables');
 

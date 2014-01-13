@@ -30,7 +30,7 @@ class Messages
         'notAllAttributesSet' =>
         array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
         'addToCart' =>
-        array('In den Warenkörb', 'Add to Chart'),
+        array('In den Warenkorb', 'Add to Chart'),
         'invalidUrl' =>
         array("Fehlerhafte URL.", "Invalid URL."),
         'edit' =>
