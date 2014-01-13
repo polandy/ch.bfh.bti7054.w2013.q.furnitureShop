@@ -18,6 +18,9 @@ class Config
     public $database_pw;
     public $database_host;
 
+    public $email;
+    public $email_pw;
+
     public $language;
     public $charset;
     public $title;
@@ -52,6 +55,13 @@ class Config
 
         # The database password
         $this->database_pw = "db_furnitureShop";
+
+        # sender email
+        $this->email = "mobius.furniturus@gmail.com";
+
+        # sender email password
+        $this->email_pw = 'Furnitinitystreet#8';
+
 
         # Charset der Webseite
         $this->charset = "UTF-8";
