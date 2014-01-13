@@ -11,9 +11,10 @@ class PDFOrderService extends \FPDF
         // Arial bold 15
         $this->SetFont('Arial', 'B', 15);
         // Move to the right
-        $this->Cell(50);
+        $this->Cell( 40, 40, $this->Image("../../images/logo.gif", $this->GetX(), $this->GetY(), 40), 0, 0, 'L', false );
+        $this->Cell(5);
         // Title
-        $this->Cell(30, 10, utf8_decode("Möbius Furniturus - ".$msgSrv->getName("pdf_title")));
+        $this->Cell(30, 10, utf8_decode("Möbius Furniturus - " . $msgSrv->getName("pdf_title")));
         // Line break
         $this->Ln(20);
     }
@@ -22,25 +23,39 @@ class PDFOrderService extends \FPDF
     {
         $msgSrv = MsgService::getInstance();
 
-        $this->Cell(200, 7, utf8_decode("Name lastname"));
+        $this->Cell(200, 7, utf8_decode("Möbius Furniturus, Inc. "));
         $this->Ln(5);
-        $this->Cell(200, 7, utf8_decode("Address"));
+        $this->Cell(200, 7, utf8_decode("Furnitinitystreet 8"));
         $this->Ln(5);
-        $this->Cell(10, 7, utf8_decode("ZIP"));
-        $this->Cell(200, 7, utf8_decode("Place"));
-        $this->Ln(10);
+        $this->Cell(10, 7, utf8_decode("3006 Berne"));
+        $this->Ln(5);
+        $this->Cell(10, 7, utf8_decode("Tel: 031 563 65 32"));
+        $this->Ln(5);
+        $this->Cell(10, 7, utf8_decode("Fax: 031 563 65 33"));
+        $this->Ln(15);
+
+        $this->Cell(200, 7, utf8_decode($user->firstName . " " . $user->lastName));
+        $this->Ln(5);
+        $this->Cell(200, 7, utf8_decode($user->address));
+        $this->Ln(5);
+        $this->Cell(10, 7, utf8_decode($user->zip . " " . $user->place));
+        $this->Ln(5);
+        $this->Cell(10, 7, utf8_decode($user->tel));
+        $this->Ln(15);
 
         $this->SetFont('Arial', 'B', 15);
         $this->Cell(40, 7, $msgSrv->getName("pdf_orderDate"));
         $this->SetFont('Arial', '', 15);
-        $this->Cell(40, 7, "03.01.2012");
+        $this->Cell(40, 7, $order->orderDate);
         $this->Ln(20);
     }
 
     // Simple table
-    function FurnitureTable($data)
+    function FurnitureTable($orderFurnitures)
     {
         $msgSrv = MsgService::getInstance();
+        $furnitureService = FurnitureService::getInstance();
+
         // Header
         $this->SetFont('Arial', 'B', 15);
         $this->Cell(40, 7, utf8_decode($msgSrv->getName("pdf_furniture")), 1);
@@ -50,14 +65,20 @@ class PDFOrderService extends \FPDF
         $this->SetFont('Arial', '', 15);
         $this->Ln();
         // Data
-        foreach ($data as $row) {
-            foreach ($row as $col)
-                $this->Cell(40, 6, $col, 1);
+        foreach ($orderFurnitures as $orderFurniture) {
+            $furnitue = $furnitureService->findFurnitureById($orderFurniture->furnitureId);
+            $feature = $furnitureService->findFeatureById($orderFurniture->featureId);
+            $price = $orderFurniture->quantity * ($furnitue->basicPrice + ($feature == null ? 0 : $feature->extraPrice));
+
+            $this->Cell(40, 6, utf8_decode($msgSrv->getName($furnitue)), 1);
+            $this->Cell(40, 6, utf8_decode($msgSrv->getName($feature)), 1);
+            $this->Cell(40, 6, $orderFurniture->quantity, 1);
+            $this->Cell(40, 6, utf8_decode(number_format($price, 2, "'", "."))." CHF", 1);
             $this->Ln();
         }
     }
 
-    function OrderFooter($order)
+    function OrderFooter($totalPrice)
     {
         $msgSrv = MsgService::getInstance();
 
@@ -65,7 +86,7 @@ class PDFOrderService extends \FPDF
         $this->Ln(15);
         $this->Cell(80);
         $this->Cell(40, 7, $msgSrv->getName("pdf_totalPrice"));
-        $this->Cell(40, 7, "450.50 CHF");
+        $this->Cell(40, 7, utf8_decode(number_format($totalPrice, 2, "'", ".")) . " CHF");
     }
 
 // Page footer

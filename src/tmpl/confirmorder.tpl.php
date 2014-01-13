@@ -12,18 +12,38 @@
         <form method="POST">
             <div class="row">
                 <div class="large-3 columns">
-                    <p><?= $TPL["msg"]->getName("register_sex") ?></p>
+                    <p><?= $TPL["msg"]->getName("conf_address") ?></p>
                 </div>
                 <div class="large-6 columns pull-3">
-                    <select name="method" required="true">
-                        <option
-                            value="1" <?= $TPL["male"] ? "selected" : "" ?>><?= $TPL["msg"]->getName("register_male") ?></option>
+                    <p><?=$TPL["user"]->firstName?> <?=$TPL["user"]->lastName?><br>
+                    <?=$TPL["user"]->address?><br>
+                    <?=$TPL["user"]->zip?> <?=$TPL["user"]->place?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-3 columns">
+                    <p><?= $TPL["msg"]->getName("conf_payment") ?></p>
+                </div>
+                <div class="large-6 columns pull-3">
+                    <select name="paymentmethod" required="true">
+                        <?php foreach ($TPL["paymentMethods"] as $paymentMethod) { ?>
+                            <option
+                                value="<?= $paymentMethod->id ?>"><?= $TPL["msg"]->getName($paymentMethod) ?></option>
+                        <? } ?>
                     </select>
                 </div>
             </div>
+            <div class="row">
+                <div class="large-3 columns">
+                    <p><?= $TPL["msg"]->getName("conf_totalPrice") ?></p>
+                </div>
+                <div class="large-6 columns pull-3">
+                    <p><strong><?= number_format($TPL["totalPrice"], 2, "'", ".") ?> CHF</strong></p>
+                </div>
+            </div>
             <div class="large-6 right">
-                <input type="submit" name="orderNow" value="<?= $TPL["msg"]->getName("conf_orderNow") ?>"
-                       class="button"/>
+                <input type="submit" name="orderNow" data-text="<?=$TPL["msg"]->getName("conf_finalCancel")?>" value="<?= $TPL["msg"]->getName("conf_orderNow") ?>"
+                       class="button" id="orderNow"/>
             </div>
         </form>
     </div>

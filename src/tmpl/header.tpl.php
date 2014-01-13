@@ -11,5 +11,6 @@
     <script src="js/vendor/custom.modernizr.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/confirm.js"></script>
 
 </head>
