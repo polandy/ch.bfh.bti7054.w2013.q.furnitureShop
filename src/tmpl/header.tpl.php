@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>M&ouml;bius Furniturus - Onlineshop</title>
+    <title><?=Config::getInstance()->title?></title>
 
 
     <link rel="stylesheet" href="styles/foundation/foundation.css">
