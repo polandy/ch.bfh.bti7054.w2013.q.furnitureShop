@@ -124,8 +124,8 @@ class FurnitureService extends AbstractService
 
     /**
      * adds the given feature for the given furniture
-     * @param $furniture
      * @param $feature
+     * @internal param $furniture
      */
     public function addFeatureForFurniture($feature)
     {
@@ -162,8 +162,8 @@ class FurnitureService extends AbstractService
             ));
         }
         else {
-            // TODO handle error
-            echo 'invalides objekt';
+            header("Location: ./index.php?pageId=403");
+
         }
     }
 

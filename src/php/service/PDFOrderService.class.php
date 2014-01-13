@@ -2,9 +2,16 @@
 
 namespace service;
 
+/**
+ * Class PDFOrderService
+ * @package service
+ * Service Class for handling PDF generation
+ */
 class PDFOrderService extends \FPDF
 {
-// Page header
+    /**
+     * Page Header
+     */
     function Header()
     {
         $msgSrv = MsgService::getInstance();
@@ -19,6 +26,11 @@ class PDFOrderService extends \FPDF
         $this->Ln(20);
     }
 
+    /**
+     * Display the Company Contact information and the receiver contact information
+     * @param $order which should be printed
+     * @param $user customer of the order for contact informations
+     */
     function OrderHeader($order, $user)
     {
         $msgSrv = MsgService::getInstance();
@@ -50,7 +62,10 @@ class PDFOrderService extends \FPDF
         $this->Ln(20);
     }
 
-    // Simple table
+    /**
+     * Generates a table based on the given orderFurnitures object
+     * @param $orderFurnitures object
+     */
     function FurnitureTable($orderFurnitures)
     {
         $msgSrv = MsgService::getInstance();
@@ -78,6 +93,10 @@ class PDFOrderService extends \FPDF
         }
     }
 
+    /**
+     * Generates the order footer of the document
+     * @param $totalPrice
+     */
     function OrderFooter($totalPrice)
     {
         $msgSrv = MsgService::getInstance();
@@ -89,7 +108,9 @@ class PDFOrderService extends \FPDF
         $this->Cell(40, 7, utf8_decode(number_format($totalPrice, 2, "'", ".")) . " CHF");
     }
 
-// Page footer
+    /**
+     * generates the page footer
+     */
     function Footer()
     {
         // Position at 1.5 cm from bottom

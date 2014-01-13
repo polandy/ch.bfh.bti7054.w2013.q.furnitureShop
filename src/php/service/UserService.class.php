@@ -86,6 +86,7 @@ class UserService extends AbstractService
 
     /**
      * @param $user Model::User object to be updated
+     * @return null
      */
     public function updateUser($user)
     {

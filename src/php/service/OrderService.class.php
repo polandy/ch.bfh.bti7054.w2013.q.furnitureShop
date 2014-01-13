@@ -176,7 +176,9 @@ class OrderService extends AbstractService
     }
 
     /**
+     * Confirm the order. Set the orderDate to now and the state isOpen = false.
      * @param $order
+     * @param $paymentMethod
      */
     public function confirmOrder($order, $paymentMethod){
         $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 0, paymentmethod_id = :paymentmethod_id WHERE id = :id");
