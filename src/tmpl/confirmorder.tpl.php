@@ -32,7 +32,7 @@
                         <?php foreach ($TPL["paymentMethods"] as $paymentMethod) { ?>
                             <option
                                 value="<?= $paymentMethod->id ?>"><?= $TPL["msg"]->getName($paymentMethod) ?></option>
-                        <? } ?>
+                        <?php } ?>
                     </select>
                 </div>
             </div>
