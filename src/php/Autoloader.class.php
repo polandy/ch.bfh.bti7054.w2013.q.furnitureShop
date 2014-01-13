@@ -2,6 +2,8 @@
 
 /**
  * Class Autoloader
+ * is used in the index.php
+ * The autoloader loads the php files with require
  */
 class Autoloader {
 

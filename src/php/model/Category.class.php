@@ -2,6 +2,11 @@
 
 namespace model;
 
+/**
+ * Class Category
+ * @package model
+ * represents the Category Table in the database
+ */
 class Category extends generic\GenericNamedModel
 {
 

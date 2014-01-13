@@ -9,7 +9,12 @@
 
 namespace model\generic;
 
-
+/**
+ * Class GenericNamedModel
+ * @package model\generic
+ * Multiple Classes / Tables has a label in all supported languages.
+ * All this classes extend from the GenericNamedModel which provides the necessary attributes, getters and setters.
+ */
 class GenericNamedModel extends GenericModel
 {
 

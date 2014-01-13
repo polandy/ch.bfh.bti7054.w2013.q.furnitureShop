@@ -1,7 +1,12 @@
 <?php
 
+/**
+ * Class Messages
+ * This class is a singleton and provides all labels for the website in all supported languages in a map.
+ */
 class Messages
 {
+    # singleton instance
     private static $instance;
 
     public static function getInstance()
@@ -11,6 +16,9 @@ class Messages
         return self::$instance;
     }
 
+    /**
+     * @return array|map containing all messages in all supported languages
+     */
     public function getMessages()
     {
         return $this->messages;

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class TemplateEngine
+ */
 class TemplateEngine
 {
     var $config;

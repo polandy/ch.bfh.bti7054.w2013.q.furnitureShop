@@ -1,11 +1,15 @@
 <?php
+/**
+ * Class Config
+ * Configuration class for the webshop.
+ * Important properties are set here.
+ */
 class Config
 {
 
-    public $rootDir;
-    public $webRootDir;
-    public $webCssDir;
+    # image directory. All Images are stored in this dir.
     public $webImgDir;
+    # PHP directory. Usually all PHP Files are stored in this or a sub directory.
     public $webPhpDir;
     public $phpDir;
     public $viewDir;
@@ -13,21 +17,31 @@ class Config
     public $tplDir;
     public $funcDir;
     public $polDir;
+
+    # The name of the database
     public $database;
+    # The name of the database user
     public $database_user;
+    # user passwort of the Database user
     public $database_pw;
+    # database host
     public $database_host;
 
+    # Email address for sending emails
     public $email;
+    # Email address password
     public $email_pw;
-
+    # chosen language for display
     public $language;
-    public $charset;
+    # title of the website
     public $title;
-    public $analytics;
 
+    # singleton
     private static $instance;
 
+    /**
+     * The Constructor sets the config values
+     */
     function __construct()
     {
         # The web-css directory
@@ -63,11 +77,8 @@ class Config
         $this->email_pw = 'Furnitinitystreet#8';
 
 
-        # Charset der Webseite
-        $this->charset = "UTF-8";
-
         # Title der Webseite
-        $this->title = "Furniture Shop - ";
+        $this->title = htmlentities("Möbius Furniturus - Online Shop");
 
         # Sprache
         if (isset($_GET["lang"]))

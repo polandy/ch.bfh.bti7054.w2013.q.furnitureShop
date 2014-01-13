@@ -9,7 +9,13 @@
 
 namespace model\generic;
 
-
+/**
+ * Class GenericModel
+ * @package model\generic
+ * This class is the super class of all model classes.
+ * In this class the default attributes / columns are defined.
+ * The attributes of all Models are public because this is necessary for the mappging from PDO to the object.
+ */
 class GenericModel {
 
     public $id;

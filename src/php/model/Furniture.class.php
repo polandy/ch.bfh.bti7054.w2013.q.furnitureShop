@@ -2,6 +2,11 @@
 
 namespace model;
 
+/**
+ * Class Furniture
+ * @package model
+ * represents the Furniture table in the database
+ */
 class Furniture extends generic\GenericNamedModel {
 
     public $basicPrice;
