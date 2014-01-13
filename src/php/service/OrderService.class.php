@@ -83,6 +83,23 @@ class OrderService extends AbstractService
     }
 
     /**
+     * Find an Order by id
+     * @param id
+     * @return Order
+     */
+    public function findOrderById($id)
+    {
+        $sth = $this->getDBH()->prepare("SELECT * FROM `order` WHERE id = :id;");
+        $sth->bindValue('id', $id);
+        $sth->execute();
+        $list = $sth->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, "model\\Order");
+        if (sizeof($list) > 0) {
+            return $list[0];
+        }
+        return null;
+    }
+
+    /**
      * Find an OrderFurniture by id
      * @param id
      * @return OrderFurniture
@@ -158,6 +175,17 @@ class OrderService extends AbstractService
         return $row["totalPrice"];
     }
 
+    /**
+     * @param $order
+     */
+    public function confirmOrder($order, $paymentMethod){
+        $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 0, paymentmethod_id = :paymentmethod_id WHERE id = :id");
+        $sth->bindValue('id', $order->id);
+        $sth->bindValue('paymentmethod_id', $paymentMethod->id);
+        $sth->execute();
+        $order = $this->findOrderById($order->id);
+
+    }
 
     /**
      * adds a furniture with an optional feature to the cart

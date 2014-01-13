@@ -28,7 +28,7 @@ $furniture = $TPL["furniture"];
         <div class="columns large-7">
             <div class="row">
                 <div class="columns large-12">
-                    <div class="large-7 columns"><?= $TPL["desc"] ?></div>
+                    <div class="large-7"><?= $TPL["desc"] ?></div>
                 </div>
             </div>
             <br/>

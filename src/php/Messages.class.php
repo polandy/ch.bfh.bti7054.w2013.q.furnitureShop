@@ -84,6 +84,11 @@ class Messages
 
         "conf_title" => array("Bestellung bestätigen", "Confirm order"),
         "conf_orderNow" => array("Jetzt bestellen", "Order now"),
+        "conf_payment" => array("Bezahlart", "Payment method"),
+        "conf_address" => array("Ihre Adresse", "Your address"),
+        "conf_totalPrice" => array("Totaler Preis", "Total price"),
+        "conf_finalCancel" => array("Wirklich jetzt bestellen?", "Really order now?"),
+        "conf_" => array("", ""),
 
         "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),
