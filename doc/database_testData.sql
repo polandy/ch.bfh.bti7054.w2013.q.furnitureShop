@@ -10,7 +10,6 @@ INSERT INTO `category` (`id`, `name_de`, `name_en`) VALUES
 (1, 'Betten', 'Bed'),
 (2, 'Leuchten', 'Luminaire'),
 (3, 'Sitzm&ouml;bel', 'Seating furniture'),
-(4, 'Schlafen', 'Sleep'),
 (5, 'Tische', 'Tables');
 
 INSERT INTO `furniture` (`id`, `basicPrice`, `description_de`, `description_en`, `name_de`, `name_en`, `categoryId`, `img_url`) VALUES
