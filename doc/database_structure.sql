@@ -19,7 +19,10 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `db_furnitureshop`
 --
-
+--
+DROP DATABASE IF EXISTS `db_furnitureshop`;
+CREATE DATABASE `db_furnitureshop` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `db_furnitureshop`;
 -- --------------------------------------------------------
 
 --
@@ -95,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `order_furniture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `orderId` int(11) NOT NULL,
   `furnitureId` int(11) NOT NULL,
-  `featureId` int(11) NOT NULL,
+  `featureId` int(11),
   `quantity` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_index` (`orderId`,`furnitureId`,`featureId`),
