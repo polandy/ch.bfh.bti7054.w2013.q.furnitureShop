@@ -36,7 +36,7 @@
                             <td><?= number_format($orderFurniture->quantity * $singlePrice, 2, ".", "'") ?> CHF</td>
                             <td><input type="checkbox" name="remove_<?= $orderFurniture->id ?>"/></td>
                         </tr>
-                    <? } ?>
+                    <?php } ?>
                     </tbody>
                     <tfoot>
                     <th></th>
@@ -50,7 +50,7 @@
                 <div class="row ">
                     <span class="large-6 alert-box alert right pull-3"><?=$TPL["msg"]->getName("cart_empty")?></span>
                 </div>
-                <? } ?>
+                <?php } ?>
                 <div class="large-3 right pull-3">
                     <a href="./index.php?pageId=6" class="button right"><?= $TPL["msg"]->getName("cart_order") ?></a>
                 </div>
