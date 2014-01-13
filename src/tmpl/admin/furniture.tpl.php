@@ -17,7 +17,8 @@
                         <?php
                         $allCategories = \service\CategoryService::getInstance()->getAllCategories();
                         foreach ($allCategories as $cat) {
-                            echo '<option value="' . $cat->getId() . '">' . $cat->getName() . '</option>';
+                            $selected = $cat->getId() == $f->categoryId ? 'selected' : '';
+                            echo '<option ' . $selected . ' value="' . $cat->getId() . '">' . $cat->getName() . '</option>';
                         }
                         ?>
                     </select>
