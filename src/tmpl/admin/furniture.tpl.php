@@ -94,7 +94,8 @@
     </div>
 
     <?php
-    if ($TPL['addFeatures']) {
+    $features = $TPL['features'];
+    if ($TPL['addFeatures'] && ((isset($features) || $features != null) && sizeof($features) > 0)) {
         ?>
         <div class="row">
             <div class="large-12 columns">
@@ -115,8 +116,6 @@
         </div>
 
         <?php
-        $features = $TPL['features'];
-        if (isset($features) || $features != null) {
             foreach ($features as $feature) {
                 ?>
                 <form method="POST">
@@ -182,9 +181,7 @@
         </form>
 
 
-    <?php
-    } // end if
-    ?>
+
 
 
 </div>

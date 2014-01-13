@@ -92,6 +92,7 @@ class Messages
         "conf_totalPrice" => array("Totaler Preis", "Total price"),
         "conf_cancel" => array("Abbrechen", "Cancel"),
         "conf_finalCancel" => array("Wirklich jetzt bestellen?", "Really order now?"),
+        "conf_" => array("", ""),
 
         "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),

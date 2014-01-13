@@ -10,14 +10,16 @@ $furniture = $TPL["furniture"];
 
         <div class="row">
             <div class="large-6 columns"><h3><?= $TPL["name"] ?></h3></div>
+            <div class='large-6 columns'>
+                <span class="radius secondary label right">
             <?php
-            echo "<div class='large-6 columns'>";
             if (Config::getInstance()->isAdmin()) {
                 $link = 'index.php?pageId=200&edit=1&f=' . $TPL['furnitureId'];
                 echo "<a href=$link>" . $TPL['msg']->getMsg('edit') . "</a>";
             }
-            echo "</div>";
             ?>
+                    </span>
+            </div>
         </div>
     </div>
 
