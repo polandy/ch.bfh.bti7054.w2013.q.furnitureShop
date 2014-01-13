@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="large-5 columns">
-            <img src="http://placehold.it/300x465&text=Image">
+            <img alt="<?=$TPL['msg']->getMsg($furniture)?>" src="<?=$furniture->getImgUrl()?>">
         </div>
         <div class="columns large-7">
             <div class="row">
@@ -70,7 +70,5 @@
                 </div>
             <?php } ?>
         </div>
-
-    </div>
     </form>
 </div>
