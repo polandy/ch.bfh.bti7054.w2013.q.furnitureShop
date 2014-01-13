@@ -238,9 +238,9 @@ class OrderService extends AbstractService
         $mail->AddAttachment($file, "order.pdf");
         if (!$mail->Send()) {
             $error = 'Mail error: ' . $mail->ErrorInfo;
+            echo $error;
             return false;
         } else {
-            $error = 'Message sent!';
             return true;
         }
     }
