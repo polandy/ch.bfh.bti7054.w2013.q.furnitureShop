@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `order_furniture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `orderId` int(11) NOT NULL,
   `furnitureId` int(11) NOT NULL,
-  `featureId` int(11) NOT NULL,
+  `featureId` int(11),
   `quantity` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_index` (`orderId`,`furnitureId`,`featureId`),
