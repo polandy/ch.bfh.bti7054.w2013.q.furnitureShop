@@ -2,6 +2,7 @@
 
 /**
  * Class TemplateEngine
+ * TemplateEngine class
  */
 class TemplateEngine
 {
@@ -13,11 +14,20 @@ class TemplateEngine
         $this->config = Config::getInstance();
     }
 
+    /**
+     * add a variable which should be accessible in the view
+     * @param $key of the variable
+     * @param null $val value of the variable
+     */
     function assign($key, $val=null)
     {
         $this->TEMPLATE_VARS[$key] = $val;
     }
 
+    /**
+     * display the template file
+     * @param $tpl_file
+     */
     function display($tpl_file)
     {
         if(!is_file($this->config->tplDir.$tpl_file.".tpl.php")) {
