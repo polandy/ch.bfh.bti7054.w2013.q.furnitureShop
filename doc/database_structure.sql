@@ -19,7 +19,10 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `db_furnitureshop`
 --
-
+--
+DROP DATABASE IF EXISTS `db_furnitureshop`;
+CREATE DATABASE `db_furnitureshop` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `db_furnitureshop`;
 -- --------------------------------------------------------
 
 --
