@@ -1,6 +1,12 @@
 <?php
+/**
+ * Controller of register
+ */
+
+// Import TemplateEngine Object
 global $tpl;
 
+// services
 $msgService = \service\MsgService::getInstance();
 $userService = \service\UserService::getInstance();
 $config = Config::getInstance();
@@ -12,11 +18,13 @@ if ($loggedinUser)
 else
     $user = new \model\User();
 
+// assign variables for view
 $updateProfile = $loggedinUser != null;
 $tpl->assign("updateProfile", $updateProfile);
 $tpl->assign("actionName", $updateProfile ? $msgService->getName("register_save") : $msgService->getName("register_register"));
 $tpl->assign("title", $updateProfile ? $msgService->getName("register_update") : $msgService->getName("register_title"));
 
+// map post params to user object
 if (isset($_POST["firstName"])) {
     $user->firstName = $_POST["firstName"];
     $user->lastName = $_POST["lastName"];
@@ -26,14 +34,15 @@ if (isset($_POST["firstName"])) {
     $user->male = $_POST["male"];
     $user->password = $_POST["password"];
 
+    // email and username must not be changed
     if (!$updateProfile) {
         $user->email = $_POST["email"];
         $user->username = $_POST["username"];
     }
 
-    // Is there an error?
+    // Check Is there an error?
     $error = false;
-
+    // checks attributes
     if (!preg_match("/^\\w{3,}$/", $user->firstName)) {
         $tpl->assign("errFirstName", $msgService->getErrorMsg($msgService->getName("register_errFirstName")));
         $error = true;
@@ -94,6 +103,7 @@ if (isset($_POST["firstName"])) {
         $error = true;
     }
 
+    // if there was no error the user will be saved / updated and logged in. redirects him to the startpage
     if (!$error) {
         $userService->updateUser($user);
         // Go to home page on successful register
@@ -106,21 +116,7 @@ if (isset($_POST["firstName"])) {
     }
 }
 
-
-//$user = $userService->findUserByName($_POST["name"]);
-
-//// User tries to login
-//if (isset($_POST["name"])) {
-//    if (isset($user) && $user->password == sha1($_POST["password"])) {
-//        $_SESSION["user_id"] = $user->id;
-//        header("Location: ./index.php");
-//    } else {
-//        $tpl->assign("errorMsg", $msgService->getErrorMsg($msgService->getName("login_failed")));
-//        $_SESSION["user_id"] = null;
-//    }
-//}
-
-
+// set params for view
 $tpl->assign("firstName", $user->firstName);
 $tpl->assign("lastName", $user->lastName);
 $tpl->assign("address", $user->address);

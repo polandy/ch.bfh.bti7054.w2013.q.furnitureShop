@@ -9,7 +9,7 @@ $furniture = $TPL["furniture"];
 
 
         <div class="row">
-            <div class="large-6 columns"><h3><?= $TPL["name"] ?></h3></div>
+            <div class="large-6 columns"><h3 class="subheader"><?= $TPL["name"] ?></h3></div>
             <div class='large-6 columns'>
                 <span class="radius secondary label right">
             <?php
@@ -25,7 +25,9 @@ $furniture = $TPL["furniture"];
 
     <div class="row">
         <div class="large-5 columns">
-            <img alt="<?=$TPL['msg']->getName($furniture)?>" src="<?=$furniture->getImgUrl()?>">
+            <div class="columns">
+                <img alt="<?=$TPL['msg']->getName($furniture)?>" src="<?=$furniture->getImgUrl()?>">
+            </div>
         </div>
         <div class="columns large-7">
             <div class="row">

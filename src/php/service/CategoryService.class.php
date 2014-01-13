@@ -66,4 +66,15 @@ class CategoryService extends AbstractService
         $category->setId($this->getDBH()->lastInsertId());
     }
 
+    /**
+     * returns the imgpath to the categoryImg
+     * @param $category object
+     * @return path to the cateogry img
+     */
+    public function getCategoryImgPath($category){
+        $path  = './' . \Config::getInstance()->webImgDir;
+        $path .= 'category/' . $category ->getId() . '.jpg' ;
+        return $path;
+    }
+
 }

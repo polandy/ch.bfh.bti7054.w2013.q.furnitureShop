@@ -48,7 +48,7 @@ class Config
         $this->webStylesDir = "styles/";
 
         # The web-img directory
-        $this->webImgDir = "img/";
+        $this->webImgDir = "images/";
 
         # The web-php directory
         $this->webPhpDir = "php/";
@@ -100,7 +100,7 @@ class Config
             6 => "confirmorder",
             100 => "admin/category",
             200 => "admin/furniture",
-            403 => "accessDenied",
+            403 => "403",
             404 => "404",
             97 => "register",
             98 => "logout",

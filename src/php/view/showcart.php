@@ -1,16 +1,20 @@
 <?php
+/*
+ * Controller for showcart
+ */
+// import the TemplateEngine Object
 global $tpl;
 
-
+// if user is not logged in redirect him to 403
 $config = Config::getInstance();
 $user = $config->getUser();
 if ($user == null)
     header("Location: index.php?pageId=403");
 
+// services
 $orderService = \service\OrderService::getInstance();
 $furnitureService = \service\FurnitureService::getInstance();
 $order = $orderService->findOrCreateOpenedOrder($user);
-
 
 // Update the cart (quantities / remove from list)
 if (isset($_POST["updateCart"])) {

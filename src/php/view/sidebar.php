@@ -1,4 +1,7 @@
 <?php
+/**
+ * Controller for sidebar
+ */
 $category = null;
 
 $tpl->assign("catFurnitures", array());
@@ -23,5 +26,5 @@ if ($category != null) {
     $furnitures = \service\FurnitureService::getInstance()->findFurnitureByCategory($category);
     $tpl->assign("catFurnitures",$furnitures);
 } else {
-    // TODO invalid URL
+    header("Location: index.php?pageId=404");
 }

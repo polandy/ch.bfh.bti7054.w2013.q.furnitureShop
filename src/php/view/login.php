@@ -1,10 +1,17 @@
 <?php
+/**
+ * Controller of confirmorder
+ */
+
+// Import TemplateEngine Object
 global $tpl;
 
+// services
 $msgService = \service\MsgService::getInstance();
 $userService = \service\UserService::getInstance();
 $config = Config::getInstance();
 
+// if user is already logged in he will be redirected to the startpage
 if ($config->getUser() != null)
     header("Location: ./index.php");
 
@@ -19,6 +26,7 @@ if (isset($_POST["name"])) {
         $_SESSION["user_id"] = null;
     }
 }
+// assign variables for usage in view
 $tpl->assign("username", isset($_POST["name"]) ? $_POST["name"] : "");
 
 

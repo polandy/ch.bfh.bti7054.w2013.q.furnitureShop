@@ -145,8 +145,13 @@ class Messages
         "register_errPassword" => array("Passwort muss mindestens 4 Zeichen haben", "Password must be at least 4 characters long"),
         "register_errPasswordVerify" => array("Passwort bitte korrekt wiederholen", "Please repeat the password correctly"),
         "register_success" => array("Gespeichert", "Saved"),
+
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
+
         "register_" => array("", ""),
+
+        "search_noResult" => array("Keine Suchergebnisse...", "Nothing found..."),
+
         "404_pageNotFound" => array("Die angeforderte Seite wurde nicht gefunden.", "The requested page ist not available.")
 
     );

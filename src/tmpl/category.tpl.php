@@ -1,10 +1,12 @@
 <?php
-// Display a category
+// Template for category
+$title = $TPL['categoryTitle'];
+?>
 
-    if (isset($_GET["catId"]) ) {
-        $catId = $_GET["catId"];
-        $category = \service\CategoryService::getInstance()->findCategoryById($catId);
+<div class="row">
+    <h3 class="subheader"><?=$title?></h3>
+</div>
+<div class="row">
 
-        echo "hier wird irgendwas für die Kategorie $catId angezeigt";
-
-    }
+    <img alt="<?=$title?>" src="<?=$TPL['catImgPath']?>" />
+</div>

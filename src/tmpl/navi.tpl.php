@@ -3,7 +3,7 @@
 ?>
 <div class="row">
     <div class="large-3 columns">
-        <a href='./index.php'><h1><img src="./images/logo.gif"/>furniturus</h1></a>
+        <a href='./index.php'><h1 class="subheader"><img src="./images/logo.gif"/>furniturus</h1></a>
     </div>
     <div class="large-4 columns">
         <ul>

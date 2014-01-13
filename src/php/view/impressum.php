@@ -1,1 +1,4 @@
 <?php
+/**
+ * controller for impressum
+ */

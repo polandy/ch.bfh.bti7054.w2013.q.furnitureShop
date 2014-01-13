@@ -1,15 +1,20 @@
 <?php
+/**
+ * Controller for the article page
+ */
+// load the TemplateEngine Object
 global $tpl;
 
-
+// get pageId for the article defined in the config
 $articlePageId = Config::getInstance()->getPageIdByValue('article');
 $furniture = null;
+
 // services
 $msgService = \service\MsgService::getInstance();
 $furnitureService = \service\FurnitureService::getInstance();
 $orderService = \service\OrderService::getInstance();
 
-//get furniture based on the param
+//get furniture based on the param, if funriture can't be found the user will be redirected to the page not found site
 if (isset($_GET["pageId"]) && $_GET["pageId"] == $articlePageId && isset($_GET["f"])) {
     $furnitureId = $_GET["f"];
     $furniture = $furnitureService->findFurnitureById($furnitureId);
@@ -30,10 +35,11 @@ if ($action == 'addToCart') {
     $furniture = $furnitureService->findFurnitureById($furniture);
 
     $orderService->addToOrder($furniture, $feature);
-
+    // redirect to showCart site
     header("Location: ./index.php?pageId=5");
 }
 
+// assign variables for usage in view
 $tpl->assign("name", $msgService->getName($furniture));
 $tpl->assign("desc", $msgService->getDescription($furniture));
 $tpl->assign("furnitureId", isset($furniture) ? $furniture->getId() : "");
