@@ -1,12 +1,13 @@
 <?php
-// Template for category
+/**
+ * template for the category site
+ */
 $title = $TPL['categoryTitle'];
 ?>
 
 <div class="row">
-    <h3 class="subheader"><?=$title?></h3>
+    <h3 class="subheader"><?= $title ?></h3>
 </div>
 <div class="row">
-
-    <img alt="<?=$title?>" src="<?=$TPL['catImgPath']?>" />
+    <img alt="<?= $title ?>" src="<?= $TPL['catImgPath'] ?>"/>
 </div>

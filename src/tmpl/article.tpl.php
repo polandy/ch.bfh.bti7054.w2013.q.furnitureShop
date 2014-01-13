@@ -1,4 +1,7 @@
 <?php
+/**
+ * template for the article site
+ */
 // Display a furniture with its features
 $furniture = $TPL["furniture"];
 ?>

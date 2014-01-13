@@ -51,6 +51,8 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
+        "error_unexpextedError" =>  array("Ein Fehler ist aufgetreten, wenden Sie sich an den Administrator, falls der Fehler nochmals auftritt",
+                                    "An error occured. Contact the administrator if the error occurs again."),
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
         "furniture_edit" => array("Ein Möbel bearbeiten", "Edit furniture"),
         "furniture_admin" => array("Admin Möbel", "Admin furniture"),

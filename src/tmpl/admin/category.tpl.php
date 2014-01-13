@@ -1,3 +1,9 @@
+<?php
+/*
+ * Template file for category admin
+ */
+?>
+
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">

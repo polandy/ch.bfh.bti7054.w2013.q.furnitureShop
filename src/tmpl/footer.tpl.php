@@ -1,3 +1,8 @@
+<?php
+/**
+ * template for the footer site
+ */
+?>
 <footer class="row">
     <div class="large-12 columns">
         <hr/>

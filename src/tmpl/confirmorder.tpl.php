@@ -1,4 +1,7 @@
 <?php
+/**
+ * template for the confirmOrder site
+ */
 // Show the current shopping cart
 ?>
 
