@@ -2,6 +2,11 @@
 
 namespace model;
 
+/**
+ * Class Feature
+ * @package model
+ * represents the Feature table in the database
+ */
 class Feature extends generic\GenericNamedModel {
 
     public $extraPrice;
