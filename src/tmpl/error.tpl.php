@@ -2,4 +2,5 @@
 /**
  * template for the error site
  */
-\service\MsgService::getInstance()->renderErrorMsg('error_unexpextedError');
+?>
+<?=$TPL["msg"]->renderErrorMsg($TPL["msg"]->getName('error_unexpectedError'));

@@ -25,6 +25,4 @@ if ($category != null) {
 
     $furnitures = \service\FurnitureService::getInstance()->findFurnitureByCategory($category);
     $tpl->assign("catFurnitures",$furnitures);
-} else {
-    header("Location: index.php?pageId=404");
 }

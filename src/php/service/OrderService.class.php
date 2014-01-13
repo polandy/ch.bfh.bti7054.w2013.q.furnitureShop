@@ -181,7 +181,7 @@ class OrderService extends AbstractService
      */
     public function confirmOrder($order, $paymentMethod)
     {
-        $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 1, paymentmethod_id = :paymentmethod_id WHERE id = :id");
+        $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 0, paymentMethodId = :paymentmethod_id WHERE id = :id");
         $sth->bindValue('id', $order->id);
         $sth->bindValue('paymentmethod_id', $paymentMethod->id);
         $sth->execute();
@@ -203,7 +203,7 @@ class OrderService extends AbstractService
         $pdf->OrderFooter($this->getTotalOrderPrice($order));
         $pdffile = tempnam(sys_get_temp_dir(), "mob");
         $pdf->Output($pdffile, "F");
-        $mailBody = "<html><body><p>" . $msgService->getName("email_dear") . " " . $user->firstName . " " . $user->lastName . "<br>" . $msgService->getName("email_text") . "</p></body>        </html>";
+        $mailBody = "<html><body><p>" . $msgService->getName("email_dear") . " " . $user->firstName . " " . $user->lastName . "<br>" . $msgService->getName("email_text") . "</p></body></html>";
         $this->sendConfirmationMail($user->email, $mailBody, $pdffile);
         $this->sendConfirmationMail($config->email, "An order has been opened by a customer.", $pdffile);
         unlink($pdffile);

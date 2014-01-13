@@ -51,7 +51,7 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
-        "error_unexpextedError" =>  array("Ein Fehler ist aufgetreten, wenden Sie sich an den Administrator, falls der Fehler nochmals auftritt",
+        "error_unexpectedError" =>  array("Ein Fehler ist aufgetreten, wenden Sie sich an den Administrator, falls der Fehler nochmals auftritt",
                                     "An error occured. Contact the administrator if the error occurs again."),
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
         "furniture_edit" => array("Ein Möbel bearbeiten", "Edit furniture"),
@@ -80,6 +80,8 @@ class Messages
         "pdf_price" => array("Preis", 'Price'),
         "pdf_orderDate" => array("Bestelldatum", "Order date"),
         "pdf_totalPrice" => array("Total", "Total"),
+        "pdf_paymentMethod" => array("Zahlungsart", "Payment method"),
+        "pdf_" => array("", ""),
         "pdf_" => array("", ""),
 
         "email_subject" => array("Bestellbestätigung", "Order confirmation"),
@@ -106,8 +108,8 @@ class Messages
         "conf_address" => array("Ihre Adresse", "Your address"),
         "conf_totalPrice" => array("Totaler Preis", "Total price"),
         "conf_cancel" => array("Abbrechen", "Cancel"),
-        "conf_finalCancel" => array("Wirklich jetzt bestellen?", "Really order now?"),
-        "conf_" => array("", ""),
+        "conf_finalCancel" => array("Sie gehen einen kostenpflichtigen Vertrag ein. Wirklich jetzt bestellen?", "You are about to enter a binding contract of purchase. Really order now?"),
+        "conf_confirmedOrder" => array("Vielen Dank für Ihre Bestellung - sie haben eine Bestellbestätigung per E-Mail erhalten.", "Thanks for your order - you've received an order confirmation via email."),
 
         "footer_impressum" => array("Impressum", "Impressum"),
         "footer_admin_createFurniture" => array("Möbel erstellen", "Create Furniture"),

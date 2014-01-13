@@ -18,14 +18,16 @@ $paymentMethodService = \service\PaymentMethodService::getInstance();
 $order = $orderService->findOrCreateOpenedOrder($user);
 
 // only continue if there are some orderFurnitures
-if(sizeof($orderService->findAllOrderFurnitures($order))<=0)
+if (sizeof($orderService->findAllOrderFurnitures($order)) <= 0)
     header("Location: index.php?pageId=5");
 
 // Order has been confirmed
 if (isset($_POST["orderNow"])) {
     $paymentMethod = $paymentMethodService->findPaymentMethodById($_POST["paymentmethod"]);
-    if ($paymentMethod != null)
+    if ($paymentMethod != null && sizeof($orderService->findAllOrderFurnitures($order)) > 0) {
         $orderService->confirmOrder($order, $paymentMethod);
+        header("Location: ./index.php?pageId=7");
+    }
 }
 
 // assign variables for usage in view

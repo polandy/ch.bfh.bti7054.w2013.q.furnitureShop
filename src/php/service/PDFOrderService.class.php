@@ -34,6 +34,8 @@ class PDFOrderService extends \FPDF
     function OrderHeader($order, $user)
     {
         $msgSrv = MsgService::getInstance();
+        $paymentService = PaymentMethodService::getInstance();
+        $paymentMethod = $paymentService->findPaymentMethodById($order->paymentMethodId);
 
         $this->Cell(200, 7, utf8_decode("Möbius Furniturus, Inc. "));
         $this->Ln(5);
@@ -56,9 +58,14 @@ class PDFOrderService extends \FPDF
         $this->Ln(15);
 
         $this->SetFont('Arial', 'B', 15);
-        $this->Cell(40, 7, $msgSrv->getName("pdf_orderDate"));
+        $this->Cell(45, 7, $msgSrv->getName("pdf_orderDate"));
         $this->SetFont('Arial', '', 15);
-        $this->Cell(40, 7, $order->orderDate);
+        $this->Cell(45, 7, $order->orderDate);
+        $this->Ln(5);
+        $this->SetFont('Arial', 'B', 15);
+        $this->Cell(45, 7, $msgSrv->getName("pdf_paymentMethod"));
+        $this->SetFont('Arial', '', 15);
+        $this->Cell(45, 7, utf8_decode($msgSrv->getName($paymentMethod)));
         $this->Ln(20);
     }
 
@@ -121,4 +128,3 @@ class PDFOrderService extends \FPDF
         $this->Cell(0, 10, 'Page ' . $this->PageNo() . '/{nb}', 0, 0, 'C');
     }
 }
-

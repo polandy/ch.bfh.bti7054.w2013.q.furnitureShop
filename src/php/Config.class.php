@@ -98,13 +98,14 @@ class Config
             4 => 'impressum',
             5 => "showcart",
             6 => "confirmorder",
+            7 => "confirmedorder",
+            97 => "register",
+            98 => "logout",
+            99 => "login",
             100 => "admin/category",
             200 => "admin/furniture",
             403 => "403",
-            404 => "404",
-            97 => "register",
-            98 => "logout",
-            99 => "login");
+            404 => "404");
 
         $this->database = "db_furnitureshop";
         $this->database_host = "localhost";

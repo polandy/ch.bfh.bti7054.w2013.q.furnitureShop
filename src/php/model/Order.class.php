@@ -14,5 +14,6 @@ class Order extends generic\GenericModel
     public $user;
     public $isOpen;
     public $orderDate;
+    public $paymentMethodId;
 
 }

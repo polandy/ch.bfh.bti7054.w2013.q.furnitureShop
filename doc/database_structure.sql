@@ -82,10 +82,10 @@ CREATE TABLE IF NOT EXISTS `order` (
   `isOpen` tinyint(1) NOT NULL,
   `orderDate` datetime DEFAULT NULL,
   `userId` int(11) DEFAULT NULL,
-  `paymentmethod_id` int(11) DEFAULT NULL,
+  `paymentMethodId` int(11) DEFAULT NULL,
   KEY `FKCR6F76G324RR2JSA` (`userId`),
   KEY `FKCHADSF87Z9GFASDF` (`id`),
-  KEY `paymentmethod_id` (`paymentmethod_id`)
+  KEY `paymentMethodId` (`paymentMethodId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -181,7 +181,7 @@ ADD CONSTRAINT `furniture_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `categor
 -- Constraints der Tabelle `order`
 --
 ALTER TABLE `order`
-ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`paymentmethod_id`) REFERENCES `paymentmethod` (`id`) ON DELETE SET NULL,
+ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`paymentMethodId`) REFERENCES `paymentmethod` (`id`) ON DELETE SET NULL,
 ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE SET NULL;
 
 --
