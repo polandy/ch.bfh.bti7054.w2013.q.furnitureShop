@@ -179,19 +179,77 @@ class OrderService extends AbstractService
      * @param $order the Order
      * @param $paymentMethod the selected payment method
      */
-    public function confirmOrder($order, $paymentMethod){
-        $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 0, paymentmethod_id = :paymentmethod_id WHERE id = :id");
+    public function confirmOrder($order, $paymentMethod)
+    {
+        $sth = $this->getDBH()->prepare("UPDATE `order` SET orderDate = now(), isOpen = 1, paymentmethod_id = :paymentmethod_id WHERE id = :id");
         $sth->bindValue('id', $order->id);
         $sth->bindValue('paymentmethod_id', $paymentMethod->id);
         $sth->execute();
         $order = $this->findOrderById($order->id);
 
+        $userService = \service\UserService::getInstance();
+        $msgService = MsgService::getInstance();
+        $config = \Config::getInstance();
+        $user = $userService->findUserById($order->userId);
+        $orderFurnitures = $this->findAllOrderFurnitures($order);
+
+        // Create the PDF
+        $pdf = new \service\PDFOrderService();
+        $pdf->AliasNbPages();
+        $pdf->AddPage();
+        $pdf->SetFont('Arial', '', 15);
+        $pdf->OrderHeader($order, $user);
+        $pdf->FurnitureTable($orderFurnitures);
+        $pdf->OrderFooter($this->getTotalOrderPrice($order));
+        $pdffile = tempnam(sys_get_temp_dir(), "mob");
+        $pdf->Output($pdffile, "F");
+        $mailBody = "<html><body><p>" . $msgService->getName("email_dear") . " " . $user->firstName . " " . $user->lastName . "<br>" . $msgService->getName("email_text") . "</p></body>        </html>";
+        $this->sendConfirmationMail($user->email, $mailBody, $pdffile);
+        $this->sendConfirmationMail($config->email, "An order has been opened by a customer.", $pdffile);
+        unlink($pdffile);
+    }
+
+    /**
+     * Email the order confirmation PDF
+     * @param $to
+     * @param $text
+     * @param $file
+     * @return bool
+     */
+    private function sendConfirmationMail($to, $text, $file)
+    {
+        $msgService = MsgService::getInstance();
+        $config = \Config::getInstance();
+        global $error;
+        $mail = new \PHPMailer(); // create a new object
+        $mail->IsSMTP(); // enable SMTP
+        $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPAuth = true; // authentication enabled
+        $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+        $mail->Host = $config->smtp;
+        $mail->Port = $config->smtp_port;
+        $mail->Username = $config->email;
+        $mail->Password = $config->email_pw;
+        $mail->SetFrom($config->email, "Moebius furniturus");
+        $mail->Subject = $msgService->getName("email_subject");
+        $mail->Body = $text;
+        $mail->IsHTML(true);
+        $mail->AddAddress($to);
+        $mail->AddAttachment($file, "order.pdf");
+        if (!$mail->Send()) {
+            $error = 'Mail error: ' . $mail->ErrorInfo;
+            return false;
+        } else {
+            $error = 'Message sent!';
+            return true;
+        }
     }
 
     /** Remove an order
      * @param $order
      */
-    public function clearOrder($order){
+    public function clearOrder($order)
+    {
         $sth = $this->getDBH()->prepare("DELETE FROM `order` WHERE id = :id");
         $sth->bindValue('id', $order->id);
         $sth->execute();

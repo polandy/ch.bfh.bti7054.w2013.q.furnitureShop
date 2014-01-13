@@ -11,7 +11,7 @@ class PDFOrderService extends \FPDF
         // Arial bold 15
         $this->SetFont('Arial', 'B', 15);
         // Move to the right
-        $this->Cell( 40, 40, $this->Image("../../images/logo.gif", $this->GetX(), $this->GetY(), 40), 0, 0, 'L', false );
+        $this->Cell( 40, 40, $this->Image("images/logo.gif", $this->GetX(), $this->GetY(), 40), 0, 0, 'L', false );
         $this->Cell(5);
         // Title
         $this->Cell(30, 10, utf8_decode("Möbius Furniturus - " . $msgSrv->getName("pdf_title")));

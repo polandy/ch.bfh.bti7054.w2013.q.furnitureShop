@@ -80,6 +80,11 @@ class Messages
         "pdf_totalPrice" => array("Total", "Total"),
         "pdf_" => array("", ""),
 
+        "email_subject" => array("Bestellbestätigung", "Order confirmation"),
+        "email_dear" => array("Guten Tag", "Dear"),
+        "email_text" => array("Ihre Bestellung wurde entgegenommen. Eine Bestellüberischt finden Sie im Anhang.<br><br>Besten Dank", "Your order is confirmed. Please find the order overview in the attachment.<br><br>Best regards"),
+        "email_" => array("", ""),
+
         "cart_title" => array("Warenkorb", "Shopping cart"),
         "cart_furniture" => array("Möbel", "Furniture"),
         "cart_feature" => array("Extra", "Feature"),
