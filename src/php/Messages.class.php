@@ -34,16 +34,16 @@ class Messages
         'article_features' => array('Features', 'Features'),
         'accessDenied' => array('Sie haben keine Berechtigung auf diese Seite zuzugreifen', 'You are not allowed to access this page'),
         'savedSuccess' =>
-        array('Erfolgreich gespeichert!', 'Saved successfully'),
+            array('Erfolgreich gespeichert!', 'Saved successfully'),
         'notAllAttributesSet' =>
-        array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
+            array('Nicht alle Attribute wurden entsprechend gesetzt.', 'Not all attributes has been set properly.'),
         'addToCart' =>
-        array('In den Warenkorb', 'Add to Cart'),
+            array('In den Warenkorb', 'Add to Cart'),
         'cart' => array('Warenkorb', 'Cart'),
         'invalidUrl' =>
-        array("Fehlerhafte URL.", "Invalid URL."),
+            array("Fehlerhafte URL.", "Invalid URL."),
         'edit' =>
-        array('Bearbeiten', 'Edit'),
+            array('Bearbeiten', 'Edit'),
         'homepage' => array(
             "<h4>Zuhause sein?</h4>
             <h4>Sich wohl fühlen?</h4>
@@ -51,6 +51,7 @@ class Messages
             "<h4>Be at home?</h4>
             <h4>Feel comfortable?</h4>
             <h4>We furnish it!</h4>"),
+        "category_admin_success" => array("Kategorie wurde erfolgreich angelegt", "Category successfully created"),
         "error_unexpectedError" =>  array("Ein Fehler ist aufgetreten, wenden Sie sich an den Administrator, falls der Fehler nochmals auftritt",
                                     "An error occured. Contact the administrator if the error occurs again."),
         "furniture_create" => array("Ein neues Möbel erstellen", "Create a new furniture"),
