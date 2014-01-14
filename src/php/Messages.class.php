@@ -74,7 +74,7 @@ class Messages
         "furniture_feature_list" => array("Verfügbare Features", 'Avaliable features'),
         "furniture_imgUrl" => array("Bild URL", 'Img URL'),
 
-        "pdf_title" => array("Bestellbestätigung", 'Order confirmation'),
+        "pdf_title" => array("Ihre Bestellung", 'Order confirmation'),
         "pdf_furniture" => array("Möbel", 'Furniture'),
         "pdf_feature" => array("Extra", 'Feature'),
         "pdf_quantity" => array("Anzahl", 'Quantity'),
