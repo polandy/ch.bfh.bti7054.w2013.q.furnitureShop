@@ -5,7 +5,7 @@
 <div class="row">
     <!-- Main Content Section -->
     <div class="large-9 columns">
-        <h3><?= $TPL["msg"]->getName("login_title") ?></h3>
+        <h3 class="subheader"><?= $TPL["msg"]->getName("login_title") ?></h3>
 
         <form method="POST">
             <div class="row">

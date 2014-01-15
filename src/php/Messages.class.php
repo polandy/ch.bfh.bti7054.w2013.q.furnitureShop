@@ -45,12 +45,12 @@ class Messages
         'edit' =>
             array('Bearbeiten', 'Edit'),
         'homepage' => array(
-            "<h4>Zuhause sein?</h4>
-            <h4>Sich wohl fühlen?</h4>
-            <h4>Wir richten es ein!</h4>",
-            "<h4>Be at home?</h4>
-            <h4>Feel comfortable?</h4>
-            <h4>We furnish it!</h4>"),
+            "<h4 class=\"subheader\">Zuhause sein?</h4>
+            <h4 class=\"subheader\">Sich wohl fühlen?</h4>
+            <h4 class=\"subheader\">Wir richten es ein!</h4>",
+            "<h4 class=\"subheader\">Be at home?</h4>
+            <h4 class=\"subheader\">Feel comfortable?</h4>
+            <h4 class=\"subheader\">We furnish it!</h4>"),
         "category_admin_success" => array("Kategorie wurde erfolgreich angelegt", "Category successfully created"),
         "error_unexpectedError" =>  array("Ein Fehler ist aufgetreten, wenden Sie sich an den Administrator, falls der Fehler nochmals auftritt",
                                     "An error occured. Contact the administrator if the error occurs again."),
@@ -85,7 +85,7 @@ class Messages
         "pdf_" => array("", ""),
         "pdf_" => array("", ""),
 
-        "email_subject" => array("Bestellbestätigung", "Order confirmation"),
+        "email_subject" => array("Ihre Bestellung", "Order confirmation"),
         "email_dear" => array("Guten Tag", "Dear"),
         "email_text" => array("Ihre Bestellung wurde entgegenommen. Eine Bestellüberischt finden Sie im Anhang.<br><br>Besten Dank", "Your order is confirmed. Please find the order overview in the attachment.<br><br>Best regards"),
         "email_" => array("", ""),
