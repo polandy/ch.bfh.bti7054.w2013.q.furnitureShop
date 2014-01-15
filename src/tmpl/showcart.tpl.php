@@ -6,7 +6,9 @@
     <!-- Main Content Section -->
     <div class="large-12 columns">
 
-        <h3><?= $TPL["msg"]->getName("cart_title") ?></h3>
+        <div class="row">
+            <h3><?= $TPL["msg"]->getName("cart_title") ?></h3>
+        </div>
 
         <form method="POST">
             <div class="row">
